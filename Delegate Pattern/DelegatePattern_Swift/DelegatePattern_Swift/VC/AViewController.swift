@@ -29,5 +29,11 @@ class AViewController: UIViewController, BViewControllerDelegate{
         messageFromBVCLabel.text = message
     }
 
+    
+    @IBAction func showXibVC(_ sender: Any) {
+        let xibVC = XibViewController(nibName: "XibViewController", bundle: Bundle(for: XibViewController.self))
+        self.present(xibVC, animated: true, completion: nil)
+    }
+    
 }
 
