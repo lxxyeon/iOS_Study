@@ -10,7 +10,7 @@ import UIKit
 class XibViewController: UIViewController {
     
     //앱에서 사용하기 위해 public 설정
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

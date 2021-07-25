@@ -78,7 +78,6 @@
 				6882DB6426AD4715009F4E05 /* AViewController.swift */,
 				6882DB7626AD4968009F4E05 /* BViewController.swift */,
 				6882DB7826AD5DA2009F4E05 /* XibViewController.swift */,
-				6882DB7926AD5DA2009F4E05 /* XibViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -88,6 +87,7 @@
 			children = (
 				6882DB6626AD4715009F4E05 /* Main.storyboard */,
 				6882DB6B26AD4716009F4E05 /* LaunchScreen.storyboard */,
+				6882DB7926AD5DA2009F4E05 /* XibViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
