@@ -6,9 +6,8 @@
 //
 
 #import "AViewController.h"
-//2. 델리게이트 채택
 #import "BViewController.h"
-
+//2. 델리게이트 채택
 @interface AViewController () <BViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *messageFromBVCLabel;
 
