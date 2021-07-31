@@ -16,6 +16,7 @@
 		6882DB7726AD4968009F4E05 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6882DB7626AD4968009F4E05 /* BViewController.swift */; };
 		6882DB7A26AD5DA2009F4E05 /* XibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6882DB7826AD5DA2009F4E05 /* XibViewController.swift */; };
 		6882DB7B26AD5DA2009F4E05 /* XibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6882DB7926AD5DA2009F4E05 /* XibViewController.xib */; };
+		6882DB7D26AD86CE009F4E05 /* AutoDebuggingTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6882DB7C26AD86CE009F4E05 /* AutoDebuggingTestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		6882DB7626AD4968009F4E05 /* BViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
 		6882DB7826AD5DA2009F4E05 /* XibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibViewController.swift; sourceTree = "<group>"; };
 		6882DB7926AD5DA2009F4E05 /* XibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibViewController.xib; sourceTree = "<group>"; };
+		6882DB7C26AD86CE009F4E05 /* AutoDebuggingTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoDebuggingTestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				6882DB6426AD4715009F4E05 /* AViewController.swift */,
 				6882DB7626AD4968009F4E05 /* BViewController.swift */,
 				6882DB7826AD5DA2009F4E05 /* XibViewController.swift */,
+				6882DB7C26AD86CE009F4E05 /* AutoDebuggingTestViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				6882DB6526AD4715009F4E05 /* AViewController.swift in Sources */,
 				6882DB7726AD4968009F4E05 /* BViewController.swift in Sources */,
 				6882DB6126AD4715009F4E05 /* AppDelegate.swift in Sources */,
+				6882DB7D26AD86CE009F4E05 /* AutoDebuggingTestViewController.swift in Sources */,
 				6882DB6326AD4715009F4E05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

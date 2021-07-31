@@ -23,7 +23,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="5Km-rK-AH0"/>
                     </constraints>
-                    <state key="normal" title="Dismiss">
+                    <state key="normal" title="XibVC Dismiss">
                         <color key="titleColor" systemColor="systemPinkColor"/>
                     </state>
                     <connections>
