@@ -20,7 +20,13 @@
 
 - (IBAction)dismissBVC:(id)sender {
     //3. 델리게이트 메소드 호출
-    [self.delegate sendMessage: _messageField.text];
+    
+    //respondsToSelector 사용하여 crash 방지
+    if (self.delegate && [self.delegate respondsToSelector:@selector(sendMessage:)]) {
+        [self.delegate sendMessage: _messageField.text];
+    }
+    
+    
     NSString *tmp_str = @"test";
 //    NSInteger tmp_int = 123
     if ([tmp_str isKindOfClass:[NSString class]]) {

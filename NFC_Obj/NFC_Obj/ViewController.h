@@ -1,0 +1,14 @@
+//
+//  ViewController.h
+//  NFC_Obj
+//
+//  Created by leeyeon2 on 2021/08/02.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface ViewController : UIViewController
+
+
+@end
+
