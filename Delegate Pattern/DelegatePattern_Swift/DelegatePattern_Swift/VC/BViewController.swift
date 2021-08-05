@@ -22,7 +22,14 @@ class BViewController: UIViewController {
 
     @IBAction func dismissBVC(_ sender: Any) {
         //3. 델리게이트 메소드 호출
-        self.delegate?.sendMessage(message: messageField.text!)
+
+        if((self.delegate) != nil){
+            guard let method = self.delegate?.sendMessage(message: messageField.text!)
+            else{
+                return
+            }
+            method
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
