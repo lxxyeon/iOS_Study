@@ -7,11 +7,14 @@
 
 import UIKit
 //1. 델리게이트 프로토콜, 프로퍼티 생성
-protocol BViewControllerDelegate {
-    func sendMessage(message: String)
+@objc protocol BViewControllerDelegate {
+    @objc optional func sendMessage(message: String)
 }
+//protocol BViewControllerDelegate {
+//    func sendMessage(message: String)
+//}
 
-class BViewController: UIViewController {
+@objc class BViewController: UIViewController {
 
     var delegate: BViewControllerDelegate?
     @IBOutlet weak var messageField: UILabel!
@@ -24,11 +27,13 @@ class BViewController: UIViewController {
         //3. 델리게이트 메소드 호출
 
         if((self.delegate) != nil){
-            guard let method = self.delegate?.sendMessage(message: messageField.text!)
-            else{
-                return
+            if let method = self.delegate?.sendMessage?(message: messageField.text!){
+                method
             }
-            method
+//            else{
+//                return
+//            }
+//            method
         }
         self.dismiss(animated: true, completion: nil)
     }

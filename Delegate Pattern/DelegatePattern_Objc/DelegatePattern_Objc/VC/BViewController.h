@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //1. 델리게이트 프로토콜, 프로퍼티 생성
 @protocol BViewControllerDelegate <NSObject>
+@optional
 -(void)sendMessage:(NSString*)message;
 @end
 

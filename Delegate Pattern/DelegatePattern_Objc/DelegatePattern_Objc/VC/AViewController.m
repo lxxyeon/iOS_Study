@@ -29,9 +29,9 @@
 }
 
 // 델리게이트 메소드 
--(void)sendMessage:(NSString*)message{
-    _messageFromBVCLabel.text = message;
-}
+//-(void)sendMessage:(NSString*)message{
+//    _messageFromBVCLabel.text = message;
+//}
 
 
 @end

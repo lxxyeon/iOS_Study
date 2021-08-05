@@ -25,9 +25,9 @@ class AViewController: UIViewController, BViewControllerDelegate{
     }
     
     // 델리게이트 메소드
-    func sendMessage(message: String){
-        messageFromBVCLabel.text = message
-    }
+//    func sendMessage(message: String){
+//        messageFromBVCLabel.text = message
+//    }
 
     
     @IBAction func showXibVC(_ sender: Any) {

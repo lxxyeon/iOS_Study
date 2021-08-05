@@ -23,6 +23,8 @@
     
     //respondsToSelector 사용하여 crash 방지
     if (self.delegate && [self.delegate respondsToSelector:@selector(sendMessage:)]) {
+        NSLog ( @"%@", [self.delegate respondsToSelector:@selector(sendMessage:)] ? @"YES" : @"NO" );
+//        NSLog(@"%@", [self.delegate respondsToSelector:@selector(sendMessage:)]);
         [self.delegate sendMessage: _messageField.text];
     }
     
