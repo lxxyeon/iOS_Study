@@ -13,6 +13,8 @@ class AViewController: UIViewController, BViewControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(String(describing: AViewController.self))
+        print(String(describing: type(of: self)))
     }
     
     @IBAction func showBVC(_ sender: Any) {
