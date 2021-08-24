@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6828AAF226D4D128001C601A /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6828AAF126D4D128001C601A /* BViewController.m */; };
 		68BCD91926C24A1500BF7283 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BCD91826C24A1500BF7283 /* AppDelegate.m */; };
 		68BCD91C26C24A1500BF7283 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BCD91B26C24A1500BF7283 /* SceneDelegate.m */; };
 		68BCD91F26C24A1500BF7283 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BCD91E26C24A1500BF7283 /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6828AAF026D4D128001C601A /* BViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
+		6828AAF126D4D128001C601A /* BViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
 		68BCD91426C24A1500BF7283 /* FunctionList_Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionList_Objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68BCD91726C24A1500BF7283 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68BCD91826C24A1500BF7283 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +45,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6828AAEE26D4D0CA001C601A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68BCD92026C24A1500BF7283 /* Main.storyboard */,
+				68BCD92526C24A1700BF7283 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6828AAEF26D4D0D5001C601A /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				68BCD91D26C24A1500BF7283 /* ViewController.h */,
+				68BCD91E26C24A1500BF7283 /* ViewController.m */,
+				6828AAF026D4D128001C601A /* BViewController.h */,
+				6828AAF126D4D128001C601A /* BViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		68BCD90B26C24A1500BF7283 = {
 			isa = PBXGroup;
 			children = (
@@ -61,15 +84,13 @@
 		68BCD91626C24A1500BF7283 /* FunctionList_Objc */ = {
 			isa = PBXGroup;
 			children = (
+				6828AAEF26D4D0D5001C601A /* VC */,
+				6828AAEE26D4D0CA001C601A /* View */,
 				68BCD91726C24A1500BF7283 /* AppDelegate.h */,
 				68BCD91826C24A1500BF7283 /* AppDelegate.m */,
 				68BCD91A26C24A1500BF7283 /* SceneDelegate.h */,
 				68BCD91B26C24A1500BF7283 /* SceneDelegate.m */,
-				68BCD91D26C24A1500BF7283 /* ViewController.h */,
-				68BCD91E26C24A1500BF7283 /* ViewController.m */,
-				68BCD92026C24A1500BF7283 /* Main.storyboard */,
 				68BCD92326C24A1700BF7283 /* Assets.xcassets */,
-				68BCD92526C24A1700BF7283 /* LaunchScreen.storyboard */,
 				68BCD92826C24A1700BF7283 /* Info.plist */,
 				68BCD92926C24A1700BF7283 /* main.m */,
 			);
@@ -148,6 +169,7 @@
 				68BCD91F26C24A1500BF7283 /* ViewController.m in Sources */,
 				68BCD91926C24A1500BF7283 /* AppDelegate.m in Sources */,
 				68BCD92A26C24A1700BF7283 /* main.m in Sources */,
+				6828AAF226D4D128001C601A /* BViewController.m in Sources */,
 				68BCD91C26C24A1500BF7283 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,27 +6,30 @@
 //
 
 #import "ViewController.h"
+#import "BViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <BViewControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *messageFromBVCLabel;
 @property (weak, nonatomic) IBOutlet UILabel *modelLabel;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _modelLabel.text = deviceModelName();
+    _modelLabel.text = self.deviceModelName;
 }
 
 // 현재 디바이스 모델 세팅.
-NSString *deviceModelName(void) {
+- (NSString*) deviceModelName {
     // For Simulator
     NSString *modelName = NSProcessInfo.processInfo.environment[@"SIMULATOR_DEVICE_NAME"];
     if (modelName.length > 0) {
         return modelName;
     }
 
-    // For real devices and simulators, except simulators running on iOS 8.x
     UIDevice *device = [UIDevice currentDevice];
     NSString *selName = [NSString stringWithFormat:@"_%@ForKey:", @"deviceInfo"];
     SEL selector = NSSelectorFromString(selName);
@@ -39,4 +42,21 @@ NSString *deviceModelName(void) {
     return modelName;
 }
 
+- (IBAction)showBVC:(id)sender {
+    BViewController *bVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BViewController"];
+    //3. 위임자 설정!!
+    //object.delegate = self
+    bVC.delegate = self;
+    bVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:bVC animated:YES completion:nil];
+}
+
+
+// 델리게이트 메소드
+-(void)sendMessage:(NSString*)message{
+    _messageFromBVCLabel.text = message;
+}
+
+
 @end
+

@@ -9,6 +9,6 @@
 
 @interface ViewController : UIViewController
 
-
+- (NSString*) deviceModelName;
 @end
 

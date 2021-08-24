@@ -1,8 +1,8 @@
 //
 //  BViewController.m
-//  DelegatePattern_Objc
+//  FunctionList_Objc
 //
-//  Created by leeyeon2 on 2021/07/25.
+//  Created by leeyeon2 on 2021/08/24.
 //
 
 #import "BViewController.h"
@@ -41,6 +41,5 @@
     NSLog(@"class type : %@", [_messageField.text class]);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 @end
