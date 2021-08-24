@@ -42,7 +42,6 @@
     return modelName;
 }
 
-
 - (IBAction)showBVC:(id)sender {
     BViewController *bVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BViewController"];
     //3. 위임자 설정!!
