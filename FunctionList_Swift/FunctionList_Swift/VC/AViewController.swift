@@ -6,17 +6,21 @@
 //
 
 import UIKit
+
 //2. 델리게이트 채택
 class AViewController: UIViewController, BViewControllerDelegate{
 
     @IBOutlet weak var messageFromBVCLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print(String(describing: AViewController.self))
         print(String(describing: type(of: self)))
         modelLabel.text = deviceModelName()
+
+        let device = UIDevice.current
+        
     }
     
     @IBAction func showBVC(_ sender: Any) {
@@ -47,6 +51,8 @@ func deviceModelName() -> String? {
         return modelName
     }
     let device = UIDevice.current
+    
+    let d = device.orientation
     let selName = "_\("deviceInfo")ForKey:"
     let selector = NSSelectorFromString(selName)
     
