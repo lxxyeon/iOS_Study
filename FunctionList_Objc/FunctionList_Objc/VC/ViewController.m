@@ -43,6 +43,7 @@
 }
 
 - (IBAction)showBVC:(id)sender {
+    [self doSomething];
     BViewController *bVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BViewController"];
     //3. 위임자 설정!!
     //object.delegate = self
@@ -57,6 +58,19 @@
     _messageFromBVCLabel.text = message;
 }
 
-
+- (void)doSomething {
+    __block int num = 0;
+    NSLog(@"num check #1 = %d", num);
+    
+    void (^testBlock)(void) = ^{
+        NSLog(@"num check #3 = %d", num);
+    };
+    
+    testBlock();
+    num = 20;
+    NSLog(@"num check #2 = %d", num);
+    testBlock();
+}
+ 
 @end
 
