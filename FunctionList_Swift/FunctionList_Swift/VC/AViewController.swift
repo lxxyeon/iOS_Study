@@ -33,9 +33,9 @@ class AViewController: UIViewController, BViewControllerDelegate{
     }
     
     // 델리게이트 메소드
-//    func sendMessage(message: String){
-//        messageFromBVCLabel.text = message
-//    }
+    func sendMessage(message: String){
+        messageFromBVCLabel.text = message
+    }
 
     
     @IBAction func showXibVC(_ sender: Any) {
@@ -47,9 +47,9 @@ class AViewController: UIViewController, BViewControllerDelegate{
 
 func deviceModelName() -> String? {
     var modelName = ProcessInfo.processInfo.environment["SIMULATOR_DEVICE_NAME"]
-    if modelName!.count > 0 {
-        return modelName
-    }
+//    if modelName!.count > 0 {
+//        return modelName
+//    }
     let device = UIDevice.current
     
     let d = device.orientation
