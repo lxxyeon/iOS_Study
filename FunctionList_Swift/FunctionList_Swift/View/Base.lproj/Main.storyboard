@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message From BViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MA-HE-Qck">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message From B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MA-HE-Qck">
                                 <rect key="frame" x="10" y="440" width="394" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="ELH-7E-SZC"/>
@@ -31,7 +32,7 @@
                                     <constraint firstAttribute="height" constant="36" id="fsP-Ee-QnT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Show B ViewController">
+                                <state key="normal" title="Delegate test">
                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                 </state>
                                 <connections>
@@ -58,12 +59,6 @@
                                     <action selector="showXibVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qhi-2o-zzX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJV-mM-mpU">
-                                <rect key="frame" x="10" y="674" width="394" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jv-s5-lEo">
                                 <rect key="frame" x="325" y="65" width="55" height="30"/>
                                 <constraints>
@@ -74,17 +69,32 @@
                                     <segue destination="xHS-bp-BLY" kind="show" id="t7t-mg-MrY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDD-rG-w3n">
+                                <rect key="frame" x="10" y="255" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJV-mM-mpU">
+                                <rect key="frame" x="10" y="184" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Tt-K7-t2K" secondAttribute="trailing" constant="10" id="2CC-OH-Zsb"/>
                             <constraint firstItem="8Jv-s5-lEo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="4yg-uN-caH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KDD-rG-w3n" secondAttribute="trailing" constant="10" id="57M-yE-n4v"/>
                             <constraint firstItem="8MA-HE-Qck" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="7Rc-IJ-zr7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yyB-XR-UcC" secondAttribute="trailing" constant="10" id="Bio-Kn-Tnd"/>
+                            <constraint firstItem="KDD-rG-w3n" firstAttribute="top" secondItem="sJV-mM-mpU" secondAttribute="bottom" constant="50" id="ELl-qe-jqg"/>
                             <constraint firstItem="gVh-9L-tNB" firstAttribute="top" secondItem="9Tt-K7-t2K" secondAttribute="bottom" constant="200" id="Fal-lH-5Om"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Jv-s5-lEo" secondAttribute="trailing" constant="34" id="LMJ-C7-tme"/>
-                            <constraint firstItem="sJV-mM-mpU" firstAttribute="top" secondItem="yyB-XR-UcC" secondAttribute="bottom" constant="79" id="Mpk-Gh-0gm"/>
+                            <constraint firstItem="sJV-mM-mpU" firstAttribute="top" secondItem="9Tt-K7-t2K" secondAttribute="bottom" constant="30" id="MVE-Qz-2dB"/>
+                            <constraint firstItem="KDD-rG-w3n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Qou-gL-ZEg"/>
                             <constraint firstItem="yyB-XR-UcC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="RaZ-6v-3QO"/>
                             <constraint firstItem="sJV-mM-mpU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="SF8-7X-cBu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sJV-mM-mpU" secondAttribute="trailing" constant="10" id="VuV-iY-q5G"/>
