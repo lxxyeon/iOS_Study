@@ -20,6 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _modelLabel.text = self.deviceModelName;
+
+    
+    NSArray<NSString *> *arr = @[@"Sam", @"John", @"Kevin", @"William"];
+    NSString *arrValue = [arr valueForKey:@"description"];
+
+    NSLog(@"array 그냥 출력 : %@", arr);
+    NSLog(@"array description 출력 : %@", arrValue);
+
 }
 
 // 현재 디바이스 모델 세팅.

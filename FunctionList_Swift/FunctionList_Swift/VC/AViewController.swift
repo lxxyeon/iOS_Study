@@ -7,6 +7,17 @@
 
 import UIKit
 
+struct Point: CustomStringConvertible {
+    let x: Int, y: Int
+
+    var description: String {
+        return "(\(x), \(y))"
+    }
+}
+
+let p = Point(x: 21, y: 30)
+let s = String(describing: p)
+
 //2. 델리게이트 채택
 class AViewController: UIViewController, BViewControllerDelegate{
 
@@ -21,6 +32,14 @@ class AViewController: UIViewController, BViewControllerDelegate{
 
         let device = UIDevice.current
         
+        print("description: " + s)
+        
+        let arr: [String] = ["Sam", "John", "Kevin", "William"]
+        let arrValue = arr.map({$0.description})
+
+        print("array 그냥 출력 : ", arr)
+        print("array description 출력 : ", arrValue)
+
     }
     
     @IBAction func showBVC(_ sender: Any) {
@@ -61,3 +80,5 @@ func deviceModelName() -> String? {
     }
     return modelName
 }
+
+// Prints "(21, 30)"
