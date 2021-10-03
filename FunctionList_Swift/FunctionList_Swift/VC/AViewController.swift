@@ -7,17 +7,6 @@
 
 import UIKit
 
-struct Point: CustomStringConvertible {
-    let x: Int, y: Int
-
-    var description: String {
-        return "(\(x), \(y))"
-    }
-}
-
-let p = Point(x: 21, y: 30)
-let s = String(describing: p)
-
 //2. 델리게이트 채택
 class AViewController: UIViewController, BViewControllerDelegate{
 
@@ -26,17 +15,17 @@ class AViewController: UIViewController, BViewControllerDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //현재 VC 확인
         print(String(describing: AViewController.self))
         print(String(describing: type(of: self)))
+        
+        //현재 device model 확인
         modelLabel.text = deviceModelName()
-
-        let device = UIDevice.current
         
-        print("description: " + s)
-        
+        //description
         let arr: [String] = ["Sam", "John", "Kevin", "William"]
         let arrValue = arr.map({$0.description})
-
         print("array 그냥 출력 : ", arr)
         print("array description 출력 : ", arrValue)
 
@@ -57,10 +46,19 @@ class AViewController: UIViewController, BViewControllerDelegate{
     }
 
     
+    // Coordicate Pattern Test
+    @IBAction func coordinateTest(_ sender: Any) {
+    }
+    
+    
+    
     @IBAction func showXibVC(_ sender: Any) {
         let xibVC = XibViewController(nibName: "XibViewController", bundle: Bundle(for: XibViewController.self))
         self.present(xibVC, animated: true, completion: nil)
     }
+    
+    
+    
     
 }
 
@@ -70,8 +68,6 @@ func deviceModelName() -> String? {
 //        return modelName
 //    }
     let device = UIDevice.current
-    
-    let d = device.orientation
     let selName = "_\("deviceInfo")ForKey:"
     let selector = NSSelectorFromString(selName)
     
@@ -81,4 +77,18 @@ func deviceModelName() -> String? {
     return modelName
 }
 
-// Prints "(21, 30)"
+
+protocol Coordinator: AnyObject {
+  func pushToDetail(_ navigationController: UINavigationController, productId: String)
+}
+
+extension Coordinator {
+
+  func pushToDetail(_ navigationController: UINavigationController, productId: String) {
+    let vc = BViewController()
+    vc.setNavigationTitle(title: "상세화면")
+//    vc.productId = productId
+//    vc.coordinator = self
+    navigationController.pushViewController(vc, animated: true)
+  }
+}

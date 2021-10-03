@@ -17,8 +17,9 @@ import UIKit
 @objc class BViewController: UIViewController {
 
     var delegate: BViewControllerDelegate?
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageField: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,4 +39,7 @@ import UIKit
         self.dismiss(animated: true, completion: nil)
     }
     
+    func setNavigationTitle(title: String) {
+        titleLabel.text = title
+    }
 }
