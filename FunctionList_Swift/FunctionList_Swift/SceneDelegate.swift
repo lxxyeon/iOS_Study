@@ -51,14 +51,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        appCoordinator = MainCoordinator(navigationController: navController)
 //        appCoordinator?.start()
         
-        window = UIWindow(frame: UIScreen.main.bounds)
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = AViewController()
+            self.window = window
+            window.makeKeyAndVisible()
+        }
+        
+        guard let _ = (scene as? UIWindowScene) else { return }
 
-        let rootNavController = UINavigationController()
-        appCoordinator = MainCoordinator(navigationController: rootNavController)
-        appCoordinator?.start()
-
-        window?.rootViewController = rootNavController
-        window?.makeKeyAndVisible()
+//
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//
+//        let rootNavController = UINavigationController()
+//        appCoordinator = MainCoordinator(navigationController: rootNavController)
+//        appCoordinator?.start()
+//
+//        window?.rootViewController = rootNavController
+//        window?.makeKeyAndVisible()
         
 //        guard let windowScene = (scene as? UIWindowScene) else { return }
         
