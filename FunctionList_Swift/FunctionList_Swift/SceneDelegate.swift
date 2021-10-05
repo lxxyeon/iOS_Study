@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-
+    var appCoordinator: MainCoordinator?
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
         guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
             let incomingURL = userActivity.webpageURL,
@@ -32,7 +32,53 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+//        // 1
+//        guard let windowScene = (scene as? UIWindowScene) else { return }
+//
+//
+//        // 2
+//        let appWindow = UIWindow(frame: windowScene.coordinateSpace.bounds)
+//        appWindow.windowScene = windowScene
+//
+//        // 3
+//        let navController = UINavigationController()
+//        appCoordinator = MainCoordinator(navigationController: navController)
+//        appCoordinator.start()
+        
+//        guard let windowScene = (scene as? UIWindowScene) else { return }
+//
+//        let navController = UINavigationController()
+//        appCoordinator = MainCoordinator(navigationController: navController)
+//        appCoordinator?.start()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+        let rootNavController = UINavigationController()
+        appCoordinator = MainCoordinator(navigationController: rootNavController)
+        appCoordinator?.start()
+
+        window?.rootViewController = rootNavController
+        window?.makeKeyAndVisible()
+        
+//        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+//        let appWindow = UIWindow(frame: windowScene.coordinateSpace.bounds)
+//        appWindow.windowScene = windowScene
+//        appWindow.rootViewController = navController
+//        appWindow.makeKeyAndVisible()
+//
+//        self.window = appWindow
+//
+        
+        
+        
+//        // 4
+//        appWindow.rootViewController = navController
+//        appWindow.makeKeyAndVisible()
+//
+//        // 5
+//        window = appWindow
+        
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

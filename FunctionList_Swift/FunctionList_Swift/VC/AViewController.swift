@@ -8,11 +8,13 @@
 import UIKit
 
 //2. 델리게이트 채택
-class AViewController: UIViewController, BViewControllerDelegate{
-
+class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
+    
     @IBOutlet weak var messageFromBVCLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
-
+    
+    weak var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,14 +23,14 @@ class AViewController: UIViewController, BViewControllerDelegate{
         print(String(describing: type(of: self)))
         
         //현재 device model 확인
-        modelLabel.text = deviceModelName()
+//        modelLabel.text = deviceModelName()
         
         //description
         let arr: [String] = ["Sam", "John", "Kevin", "William"]
         let arrValue = arr.map({$0.description})
         print("array 그냥 출력 : ", arr)
         print("array description 출력 : ", arrValue)
-
+        
     }
     
     @IBAction func showBVC(_ sender: Any) {
@@ -44,12 +46,12 @@ class AViewController: UIViewController, BViewControllerDelegate{
     func sendMessage(message: String){
         messageFromBVCLabel.text = message
     }
-
     
     // Coordicate Pattern Test
     @IBAction func coordinateTest(_ sender: Any) {
+//        self.coordinator?.pushSecondVC()
+        self.coordinator?.buySubscription()
     }
-    
     
     
     @IBAction func showXibVC(_ sender: Any) {
@@ -57,16 +59,13 @@ class AViewController: UIViewController, BViewControllerDelegate{
         self.present(xibVC, animated: true, completion: nil)
     }
     
-    
-    
-    
 }
 
 func deviceModelName() -> String? {
     var modelName = ProcessInfo.processInfo.environment["SIMULATOR_DEVICE_NAME"]
-//    if modelName!.count > 0 {
-//        return modelName
-//    }
+    //    if modelName!.count > 0 {
+    //        return modelName
+    //    }
     let device = UIDevice.current
     let selName = "_\("deviceInfo")ForKey:"
     let selector = NSSelectorFromString(selName)
@@ -75,20 +74,4 @@ func deviceModelName() -> String? {
         modelName = String(describing: device.perform(selector, with: "marketing-name"))
     }
     return modelName
-}
-
-
-protocol Coordinator: AnyObject {
-  func pushToDetail(_ navigationController: UINavigationController, productId: String)
-}
-
-extension Coordinator {
-
-  func pushToDetail(_ navigationController: UINavigationController, productId: String) {
-    let vc = BViewController()
-    vc.setNavigationTitle(title: "상세화면")
-//    vc.productId = productId
-//    vc.coordinator = self
-    navigationController.pushViewController(vc, animated: true)
-  }
 }

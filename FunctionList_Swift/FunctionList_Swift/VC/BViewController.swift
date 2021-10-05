@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 //1. 델리게이트 프로토콜, 프로퍼티 생성
 @objc protocol BViewControllerDelegate {
     @objc optional func sendMessage(message: String)
@@ -14,12 +15,15 @@ import UIKit
 //    func sendMessage(message: String)
 //}
 
-@objc class BViewController: UIViewController {
+@objc class BViewController: UIViewController, Storyboarded {
 
-    var delegate: BViewControllerDelegate?
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageField: UILabel!
 
+    var delegate: BViewControllerDelegate?
+    weak var coordinator: SecondViewCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

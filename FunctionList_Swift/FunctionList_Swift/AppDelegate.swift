@@ -12,6 +12,7 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var mainCoodinator: MainCoordinator?
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true),
@@ -35,6 +36,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        
+        let navigationController = UINavigationController()
+        
+        // coodinator 인스턴스 생성
+        mainCoodinator = MainCoordinator(navigationController: navigationController)
+        // coodinator로 첫 화면 열기
+        mainCoodinator?.start()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
         return true
     }
     
