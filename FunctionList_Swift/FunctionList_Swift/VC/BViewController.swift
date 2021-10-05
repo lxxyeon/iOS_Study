@@ -11,12 +11,8 @@ import Foundation
 @objc protocol BViewControllerDelegate {
     @objc optional func sendMessage(message: String)
 }
-//protocol BViewControllerDelegate {
-//    func sendMessage(message: String)
-//}
 
 @objc class BViewController: UIViewController, Storyboarded {
-
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageField: UILabel!

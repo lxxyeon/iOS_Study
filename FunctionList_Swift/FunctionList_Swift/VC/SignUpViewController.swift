@@ -21,9 +21,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         // 다음 버튼 비활성화
         nextBtn.isEnabled = false
-        
         let tapGestureView: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapView(_:)))
-        
         self.view.addGestureRecognizer(tapGestureView)
     }
     
@@ -36,23 +34,16 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         else { nextBtn.isEnabled = false }
     }
     
-    
     @IBAction func nextBtnAction(_ sender: Any) {
         UserInfo.shared.id = userId.text
         UserInfo.shared.password = userPw.text
-        
-        
     }
     
     //취소 버튼
     @IBAction func cancleBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
+
     //MARK:- imagePicker
     @IBAction func tapImageView(_ sender: Any) {
         self.present(self.imagePicker, animated: true, completion: nil)

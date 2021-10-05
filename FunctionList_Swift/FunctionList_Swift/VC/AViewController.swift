@@ -23,7 +23,7 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
         print(String(describing: type(of: self)))
         
         //현재 device model 확인
-//        modelLabel.text = deviceModelName()
+        modelLabel.text = deviceModelName()
         
         //description
         let arr: [String] = ["Sam", "John", "Kevin", "William"]
@@ -49,8 +49,7 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
     
     // Coordicate Pattern Test
     @IBAction func coordinateTest(_ sender: Any) {
-//        self.coordinator?.pushSecondVC()
-        self.coordinator?.buySubscription()
+        self.coordinator?.pushSecondVC()
     }
     
     

@@ -13,8 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     var mainCoodinator: MainCoordinator?
-    
-    
+
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         print("called")
         
@@ -94,13 +93,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navController
-        window?.makeKeyAndVisible()
+//        window?.makeKeyAndVisible()
 
         return true
     }
     
-    
-    // MARK: UISceneSession Lifecycle
+    //SceneDelegate 삭제하면서 제거
+// MARK: UISceneSession Lifecycle
 //
 //    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
 //        // Called when a new scene session is being created.
@@ -113,7 +112,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
 //        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 //    }
-//
-//
+
 }
 
