@@ -8,6 +8,8 @@
 import UIKit
 import Firebase
 
+let navController = UINavigationController()
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -15,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var mainCoodinator: MainCoordinator?
 
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        print("called")
         
         guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
             let incomingURL = userActivity.webpageURL,
@@ -25,68 +26,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         let params = components.queryItems ?? [URLQueryItem]()
 
+        // 3. 쿼리확인
+        if let value = params.first(where: { $0.name == "scene" })?.value {
+            processDeeplink(with: value)
+            return true
+        } else {
+            print("index missing")
+            return false
+        }
         print("path = \(incomingURL)")
         print("params = \(params)")
         
         return true
     }
-    
-//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//        guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true),
-//              let path = components.path,
-//              let params = components.queryItems else {
-//                  return false
-//              }
-//        guard path == nil else {
-//            return false
-//        }
-//
-//        if let value = params.first(where: { $0.name == "scene" })?.value {
-//            return true
-//        } else {
-//            print("index missing")
-//            return false
-//        }
-//    }
-//
-//
-//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        // Override point for customization after application launch.
-//        FirebaseApp.configure()
-//
-//        if #available(iOS 13, *) {
-//            print("set in SceneDelegate")
-//        } else {
-//
-//            let window = UIWindow(frame: UIScreen.main.bounds)
-//
-//            mainCoodinator = MainCoordinator(window: window)
-//            mainCoodinator?.start()
-//
-////            window.rootViewController = AViewController()
-////            self.window = window
-////            window.makeKeyAndVisible()
-//
-//        }
 
-//        let navigationController = UINavigationController()
-//
-//        // coodinator 인스턴스 생성
-//        mainCoodinator = MainCoordinator(navigationController: navigationController)
-//        // coodinator로 첫 화면 열기
-//        mainCoodinator?.start()
-//
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = navigationController
-//        window?.makeKeyAndVisible()
-//        return true
-//    }
-    
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // MainCoordinator로 첫 화면 시작
-        let navController = UINavigationController()
 
         mainCoodinator = MainCoordinator(navigationController: navController)
         mainCoodinator?.start()
@@ -98,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    //SceneDelegate 삭제하면서 제거
+//SceneDelegate 삭제하면서 제거
 // MARK: UISceneSession Lifecycle
 //
 //    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -115,3 +71,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// 4. 딥링크 처리 로직: 로그인이 되어있다면 홈화면을 베이스로 하며, 특정 화면으로 이동하게끔 설정
+private func processDeeplink(with scene: String) {
+    // TODO - token정보 가지고 로그인 판단
+//    let isLoggedIn = true
+//    if !isLoggedIn {
+//        _ = SplashCoordinator(rootViewController: navigationController, postTaskManager: postTaskManager, initialRoute: .splash)
+//        return
+//    }
+//
+//    // Home화면이 베이스가 되게끔 설정
+//    if navigationController.viewControllers.first as? HomeVC == nil {
+//        _ = HomeCoordinator(rootViewController: navigationController, postTaskManager: postTaskManager, initialRoute: .home)
+//    }
+
+    switch scene {
+    case "scene":
+        _ = SecondViewCoordinator(navigationController: navController)
+    case "card":
+        break
+    default:
+        break
+    }
+}

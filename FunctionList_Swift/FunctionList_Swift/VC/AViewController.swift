@@ -18,6 +18,12 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //현재 function 확인
+        print("func : \(#function)")
+        print("line : \(#line)")
+        print("file : \(#file)")
+        print("file Name : \(#fileID)")
+        
         //현재 VC 확인
         print(String(describing: AViewController.self))
         print(String(describing: type(of: self)))

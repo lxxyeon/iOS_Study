@@ -21,6 +21,11 @@
     [super viewDidLoad];
     _modelLabel.text = self.deviceModelName;
 
+    //로그 출력
+    NSLog(@"func : %s", __func__);
+    NSLog(@"line : %d", __LINE__);
+    NSLog(@"file : %s", __FILE__);
+    NSLog(@"file name : %s", __FILE_NAME__);
     
     NSArray<NSString *> *arr = @[@"Sam", @"John", @"Kevin", @"William"];
     NSString *arrValue = [arr valueForKey:@"description"];
