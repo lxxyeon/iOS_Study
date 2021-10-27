@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>727366384774-bb94grsdb123l7a5q77gugbcsimtma7c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.727366384774-bb94grsdb123l7a5q77gugbcsimtma7c</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA1-84364El0Vx6Zvbp0_trXi9CPxB73pY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>727366384774</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>leeyeon2.FunctionList-Swift</string>
+	<key>PROJECT_ID</key>
+	<string>hostingdemo-a9104</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hostingdemo-a9104.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:727366384774:ios:fe31b1aaf7211bb97b2507</string>
+</dict>
+</plist>
