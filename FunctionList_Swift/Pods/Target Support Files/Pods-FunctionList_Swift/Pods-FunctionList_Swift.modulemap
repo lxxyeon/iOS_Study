@@ -1,0 +1,6 @@
+framework module Pods_FunctionList_Swift {
+  umbrella header "Pods-FunctionList_Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
