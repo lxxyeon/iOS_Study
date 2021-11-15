@@ -13,16 +13,27 @@
 
 //block sample
 //typedef 선언
-// block1. 정의
+
+// block1. typedef 정의
 //typedef int (^square)(int);
-typedef void (^CompleteHandler)(id *result);
+typedef void (^CompleteHandler1)(void);
+// typedef block
+-(void)performActionWithCompletion:(CompleteHandler1)completeHandler;
+
+
+typedef void (^CompleteHandler2)(NSString *result, NSError *error);
 
 //전역변수로 사용하고 싶을 때
-@property (strong, nonatomic) CompleteHandler completeHandler;
+@property (strong, nonatomic) CompleteHandler1 completeHandler;
+
+
+
+
 //이름이나 타입의 선언 없이 사용하고 싶을 때
 -(void)BlockExam:(void(^)(void))completeHandler;
+
 //typedef 사용
--(void)BlockExam:(NSString *)str completeHandler:(CompleteHandler)completeHandler;
--(void)BlockTest;
+-(void)BlockExam:(NSString *)str completeHandler:(CompleteHandler1)completeHandler;
+
 @end
 
