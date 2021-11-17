@@ -17,6 +17,16 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //objC ? 은 삼항 연자
+//        res = (inPseudoEditMode) ? "Yes" : "No";
+        var questionMark: Bool = true
+        var res: String
+        
+        if(questionMark) {
+            res = "Yes"
+        } else {
+            res = "No"
+        }
         
         //현재 function 확인
         print("func : \(#function)")
