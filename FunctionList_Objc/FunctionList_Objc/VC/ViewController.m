@@ -79,7 +79,6 @@
     
 }
 
-// 블록함수 - 콜백함수에 대한 이벤트 리스너
 -(void)performActionWithCompletion:(CompleteHandler1)completeHandler{
     NSLog(@"Action Performed");
     completeHandler();
