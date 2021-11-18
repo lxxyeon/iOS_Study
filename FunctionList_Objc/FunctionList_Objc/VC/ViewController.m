@@ -75,8 +75,10 @@
         }
     };
     
-    
-    
+    //completionHandler
+    [self beginTaskWithName:@"MyTask" completion:^{
+       NSLog(@"The task is complete");
+    }];
     
 }
 // - (void)exampleMethodName:(블록 선언이 들어갈 자리)블록 이름;
