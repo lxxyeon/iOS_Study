@@ -51,6 +51,7 @@
     // block1. 블럭타입의 함수 구현
     // addBlock은 함수 블럭 변수
     // 뒤에 ^(int a, int b)는 블럭 타입의 함수
+    // 반환형 (^블록명)(파라미터 타입);
     int (^addBlock) (int, int) = ^(int a, int b){
         return a + b;
     };
@@ -74,9 +75,14 @@
         }
     };
     
+
     
     
-    
+}
+// - (void)exampleMethodName:(블록 선언이 들어갈 자리)블록 이름;
+//-(void)exampleMethodName:(void (^blockName)(void))methodBlockName{
+//블록이름 생략
+-(void)exampleMethodName:(void (^)(void))methodBlockName{
 }
 
 -(void)performActionWithCompletion:(CompleteHandler1)completeHandler{
