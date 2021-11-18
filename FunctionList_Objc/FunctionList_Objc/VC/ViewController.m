@@ -75,7 +75,7 @@
         }
     };
     
-
+    
     
     
 }
@@ -83,6 +83,13 @@
 //-(void)exampleMethodName:(void (^blockName)(void))methodBlockName{
 //블록이름 생략
 -(void)exampleMethodName:(void (^)(void))methodBlockName{
+    //methodBlockName 은 블록 안에서 사용할 블록이름
+    methodBlockName();
+}
+
+//파라미터 있는 블록함수
+- (void)doSomethingWithBlock:(void (^)(double, double))block {
+    block(21.0, 2.0);
 }
 
 -(void)performActionWithCompletion:(CompleteHandler1)completeHandler{
