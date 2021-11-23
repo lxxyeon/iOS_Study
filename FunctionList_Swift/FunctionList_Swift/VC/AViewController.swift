@@ -9,7 +9,7 @@ import UIKit
 
 //2. 델리게이트 채택
 class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
-
+    
     @IBOutlet weak var messageFromBVCLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
     
@@ -57,7 +57,7 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
             containerVC.testStr = "Value : \(containerValue)"
         }
     }
-
+    
     @IBAction func changeContainerValue(_ sender: Any) {
         containerValue += 1
         print(containerValue)
@@ -66,7 +66,11 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
         CVC.ChangeLabel(labelToChange: containerValue)
     }
     
-
+    // childView에서 값 받아옴
+    func dataFromContainer(containerData : String){
+        messageFromBVCLabel.text = "\(containerData)"
+    }
+    
     @IBAction func showBVC(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let bVC: BViewController = storyboard.instantiateViewController(withIdentifier: "BViewController") as! BViewController
