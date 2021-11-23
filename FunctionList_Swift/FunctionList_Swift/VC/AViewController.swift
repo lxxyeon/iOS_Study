@@ -18,7 +18,7 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
     override func viewDidLoad() {
         super.viewDidLoad()
         //objC ? 은 삼항 연자
-//        res = (questionMark) ? "Yes" : "No";
+        //        res = (questionMark) ? "Yes" : "No";
         var questionMark: Bool = true
         var res: String
         
@@ -47,6 +47,13 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
         print("array 그냥 출력 : ", arr)
         print("array description 출력 : ", arrValue)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "embedContainer" {
+            let containerVC = segue.destination as! ContainerViewController
+            containerVC.testStr = "TEST"
+        }
     }
     
     @IBAction func showBVC(_ sender: Any) {
