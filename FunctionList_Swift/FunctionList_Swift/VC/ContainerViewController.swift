@@ -15,9 +15,10 @@ class ContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.testLabel.text = testStr
     }
     
-
+    func ChangeLabel(labelToChange : Int){
+        self.testLabel.text = "Value : \(labelToChange)"
+     }
 }

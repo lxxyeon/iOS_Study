@@ -9,11 +9,12 @@ import UIKit
 
 //2. 델리게이트 채택
 class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
-    
+
     @IBOutlet weak var messageFromBVCLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
     
     weak var coordinator: MainCoordinator?
+    var containerValue: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,10 +53,21 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedContainer" {
             let containerVC = segue.destination as! ContainerViewController
-            containerVC.testStr = "TEST"
+            containerVC.testStr = "Value : \(containerValue)"
+          
         }
     }
     
+    
+    @IBAction func changeContainerValue(_ sender: Any) {
+        containerValue += 1
+        print(containerValue)
+        //childView로 값 보냄
+        let CVC = children.last as! ContainerViewController
+        CVC.ChangeLabel(labelToChange: containerValue)
+    }
+    
+
     @IBAction func showBVC(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let bVC: BViewController = storyboard.instantiateViewController(withIdentifier: "BViewController") as! BViewController
