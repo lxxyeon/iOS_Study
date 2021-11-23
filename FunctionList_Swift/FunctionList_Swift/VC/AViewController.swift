@@ -50,19 +50,18 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
         
     }
     
+    //ContainerView 의 ViewDidLoad보다 먼저 실행
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedContainer" {
             let containerVC = segue.destination as! ContainerViewController
             containerVC.testStr = "Value : \(containerValue)"
-          
         }
     }
-    
-    
+
     @IBAction func changeContainerValue(_ sender: Any) {
         containerValue += 1
         print(containerValue)
-        //childView로 값 보냄
+        // childView로 값 보냄
         let CVC = children.last as! ContainerViewController
         CVC.ChangeLabel(labelToChange: containerValue)
     }
