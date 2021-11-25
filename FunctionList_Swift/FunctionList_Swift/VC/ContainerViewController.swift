@@ -6,16 +6,21 @@
 //
 
 import UIKit
+import WebKit
 
-class ContainerViewController: UIViewController {
+class ContainerViewController: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var testLabel: UILabel!
-    
+    @IBOutlet weak var webView: WKWebView!
     var testStr: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.testLabel.text = testStr
+        
+        let url : URL! = URL(string: "https://www.google.com/")
+        let request = URLRequest(url: url)
+        self.webView.load(request)
     }
     
     func ChangeLabel(labelToChange : Int){
