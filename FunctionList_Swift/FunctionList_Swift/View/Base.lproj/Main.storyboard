@@ -523,10 +523,18 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="efc-uc-sZF">
+                                <rect key="frame" x="140" y="225" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="GGL-NV-5Jt"/>
+                                    <constraint firstAttribute="width" constant="20" id="gFu-37-D2Q"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cm8-wG-VHT"/>
                         <color key="backgroundColor" red="0.95327786790000002" green="0.66039306450000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="efc-uc-sZF" firstAttribute="leading" secondItem="Cm8-wG-VHT" secondAttribute="leading" constant="140" id="109-SL-5w4"/>
                             <constraint firstItem="T2G-8t-CeC" firstAttribute="top" secondItem="9mD-hs-Amw" secondAttribute="bottom" constant="20" id="6nm-dr-zzk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T2G-8t-CeC" secondAttribute="trailing" constant="10" id="7sG-cV-7vd"/>
                             <constraint firstItem="W49-pe-H2a" firstAttribute="leading" secondItem="Cm8-wG-VHT" secondAttribute="leading" id="IL0-hv-ctg"/>
@@ -537,11 +545,13 @@
                             <constraint firstItem="9mD-hs-Amw" firstAttribute="top" secondItem="pFe-Lb-dCM" secondAttribute="topMargin" constant="15" id="aJV-jx-eap"/>
                             <constraint firstItem="F2D-ez-Lzc" firstAttribute="top" secondItem="T2G-8t-CeC" secondAttribute="bottom" constant="14" id="cyf-fx-Aqf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F2D-ez-Lzc" secondAttribute="trailing" constant="50" id="dhC-Um-fQM"/>
+                            <constraint firstItem="efc-uc-sZF" firstAttribute="top" secondItem="F2D-ez-Lzc" secondAttribute="bottom" constant="59" id="eE8-JN-5he"/>
                             <constraint firstItem="Cm8-wG-VHT" firstAttribute="trailing" secondItem="W49-pe-H2a" secondAttribute="trailing" id="npB-75-3h0"/>
                             <constraint firstItem="9mD-hs-Amw" firstAttribute="centerX" secondItem="pFe-Lb-dCM" secondAttribute="centerX" id="xdw-Y0-XpQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicatorView" destination="efc-uc-sZF" id="Wfs-2G-zcH"/>
                         <outlet property="testLabel" destination="T2G-8t-CeC" id="Q98-c3-BZ8"/>
                         <outlet property="webView" destination="W49-pe-H2a" id="2E8-wz-WOK"/>
                     </connections>
