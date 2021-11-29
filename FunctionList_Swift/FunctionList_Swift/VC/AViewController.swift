@@ -58,17 +58,17 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
         }
     }
     
+    
+    // childView로 값 보냄
     @IBAction func changeContainerValue(_ sender: Any) {
         containerValue += 1
-        print(containerValue)
-        // childView로 값 보냄
         let CVC = children.last as! ContainerViewController
         CVC.ChangeLabel(labelToChange: containerValue)
     }
     
     // childView에서 값 받아옴
     func dataFromContainer(containerData : String){
-        messageFromBVCLabel.text = "\(containerData)"
+        messageFromBVCLabel.text = "Value From Children : \(containerData)"
     }
     
     @IBAction func showBVC(_ sender: Any) {
