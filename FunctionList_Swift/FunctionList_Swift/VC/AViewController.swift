@@ -54,7 +54,7 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedContainer" {
             let containerVC = segue.destination as! ContainerViewController
-            containerVC.testStr = "Value : \(containerValue)"
+            containerVC.testStr = "Value from Prepare: \(containerValue)"
         }
     }
     
