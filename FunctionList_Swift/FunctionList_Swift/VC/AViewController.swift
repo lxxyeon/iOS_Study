@@ -50,6 +50,12 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
         
     }
     
+    
+    
+    @IBAction func crashButtonTapped(_ sender: Any) {
+        fatalError()
+    }
+    
     //ContainerView 의 ViewDidLoad보다 먼저 실행
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedContainer" {
