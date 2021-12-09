@@ -51,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navController
 //        window?.makeKeyAndVisible()
 
+        FirebaseApp.configure()
         return true
     }
     

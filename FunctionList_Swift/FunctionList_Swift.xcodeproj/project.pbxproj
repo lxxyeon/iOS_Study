@@ -246,7 +246,7 @@
 				68BCD8EC26C244C500BF7283 /* Frameworks */,
 				68BCD8ED26C244C500BF7283 /* Resources */,
 				719F32E17A920EAD8CB09CA7 /* [CP] Embed Pods Frameworks */,
-				685168B12760C9810060243F /* ShellScript */,
+				685168B12760C9810060243F /* Firebase crashlytics */,
 			);
 			buildRules = (
 			);
@@ -317,7 +317,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		685168B12760C9810060243F /* ShellScript */ = {
+		685168B12760C9810060243F /* Firebase crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,6 +326,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Firebase crashlytics";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -603,6 +604,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FunctionList_Swift/FunctionList_Swift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = W832C4SNYD;
 				INFOPLIST_FILE = FunctionList_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -624,7 +626,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FunctionList_Swift/FunctionList_Swift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = W832C4SNYD;
 				INFOPLIST_FILE = FunctionList_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
