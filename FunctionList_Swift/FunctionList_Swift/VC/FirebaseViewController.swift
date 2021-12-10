@@ -10,7 +10,7 @@ import Firebase
 import FirebaseCrashlytics
 import Reachability
 
-class FirebaseViewController: UIViewController {
+class FirebaseViewController: UIViewController, Storyboarded {
     lazy var crashlytics = Crashlytics.crashlytics()
 
     override func viewDidLoad() {
@@ -32,14 +32,14 @@ class FirebaseViewController: UIViewController {
       
       updateAndTrackNetworkStatus()
       
-      Crashlytics.crashlytics().setUserID("123456789")
+      Crashlytics.crashlytics().setUserID("1004")
 
       let userInfo = [
         NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
         NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
         NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString("Does this page exist?", comment:""),
         "ProductID": "123456",
-        "UserID": "Jane Smith"
+        "UserID": "Leeyeon"
       ]
       let error = NSError(domain: NSURLErrorDomain, code: -1001, userInfo: userInfo)
       Crashlytics.crashlytics().record(error: error)

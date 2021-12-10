@@ -17,8 +17,11 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
 
     func start() {
-        let vc = AViewController.instantiate()
-        vc.coordinator = self
+        let vc = FirebaseViewController.instantiate()
+        
+//        let vc = AViewController.instantiate()
+//        vc.coordinator = self
+        
         navigationController.delegate = self
         navigationController.pushViewController(vc, animated: false)
     }
