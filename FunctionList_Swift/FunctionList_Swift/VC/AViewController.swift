@@ -66,7 +66,7 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
                         ] as [String : Any]
 
         Crashlytics.crashlytics().setCustomKeysAndValues(keysAndValues)
-        Crashlytics.crashlytics().setUserID("123456789")
+        Crashlytics.crashlytics().setUserID("leeyeon")
     }
     
     

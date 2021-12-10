@@ -289,6 +289,21 @@
             </objects>
             <point key="canvasLocation" x="787" y="88"/>
         </scene>
+        <!--Firebase View Controller-->
+        <scene sceneID="YyM-LN-jOH">
+            <objects>
+                <viewController id="zGv-hV-285" customClass="FirebaseViewController" customModule="FunctionList_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="alE-8d-1nF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YGB-gm-jtj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyh-u1-kNU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-728" y="-561"/>
+        </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="okj-h2-Dyp">
             <objects>
