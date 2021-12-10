@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 //2. 델리게이트 채택
 class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
@@ -48,6 +49,24 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
         print("array 그냥 출력 : ", arr)
         print("array description 출력 : ", arrValue)
         
+        
+        // Set int_key to 100.
+        Crashlytics.crashlytics().setCustomValue(100, forKey: "int_key")
+
+        // Set str_key to "hello".
+        Crashlytics.crashlytics().setCustomValue("hello", forKey: "str_key")
+        
+        let keysAndValues = [
+                         "string key" : "string value",
+                         "string key 2" : "string value 2",
+                         "boolean key" : true,
+                         "boolean key 2" : false,
+                         "float key" : 1.01,
+                         "float key 2" : 2.02
+                        ] as [String : Any]
+
+        Crashlytics.crashlytics().setCustomKeysAndValues(keysAndValues)
+        Crashlytics.crashlytics().setUserID("123456789")
     }
     
     
