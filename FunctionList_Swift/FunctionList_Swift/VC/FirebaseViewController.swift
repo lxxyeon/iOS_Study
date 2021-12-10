@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseCrashlytics
-
+import Reachability
 
 class FirebaseViewController: UIViewController {
     lazy var crashlytics = Crashlytics.crashlytics()
