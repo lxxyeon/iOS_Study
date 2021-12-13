@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+import FirebaseCrashlytics
+
 
 let navController = UINavigationController()
 
@@ -50,9 +52,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navController
 //        window?.makeKeyAndVisible()
+        
+        
 
         FirebaseApp.configure()
         return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        AppInfo.shared.logAppseeUserId()
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        AppInfo.shared.logAppseeUserId()
     }
     
 //SceneDelegate 삭제하면서 제거

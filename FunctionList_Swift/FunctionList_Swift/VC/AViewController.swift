@@ -51,22 +51,22 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
         
         
         // Set int_key to 100.
-        Crashlytics.crashlytics().setCustomValue(100, forKey: "int_key")
-
-        // Set str_key to "hello".
-        Crashlytics.crashlytics().setCustomValue("hello", forKey: "str_key")
+//        Crashlytics.crashlytics().setCustomValue(100, forKey: "int_key")
+//
+//        // Set str_key to "hello".
+//        Crashlytics.crashlytics().setCustomValue("hello", forKey: "str_key")
         
-        let keysAndValues = [
-                         "string key" : "string value",
-                         "string key 2" : "string value 2",
-                         "boolean key" : true,
-                         "boolean key 2" : false,
-                         "float key" : 1.01,
-                         "float key 2" : 2.02
-                        ] as [String : Any]
-
-        Crashlytics.crashlytics().setCustomKeysAndValues(keysAndValues)
-        Crashlytics.crashlytics().setUserID("leeyeon")
+//        let keysAndValues = [
+//                         "string key" : "string value",
+//                         "string key 2" : "string value 2",
+//                         "boolean key" : true,
+//                         "boolean key 2" : false,
+//                         "float key" : 1.01,
+//                         "float key 2" : 2.02
+//                        ] as [String : Any]
+//
+//        Crashlytics.crashlytics().setCustomKeysAndValues(keysAndValues)
+//        Crashlytics.crashlytics().setUserID("leeyeon")
     }
     
     
