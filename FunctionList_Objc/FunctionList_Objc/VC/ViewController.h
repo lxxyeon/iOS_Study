@@ -36,6 +36,6 @@ typedef void (^CompleteHandler2)(NSString *result, NSError *error);
 -(void)BlockExam:(NSString *)str completeHandler:(CompleteHandler1)completeHandler;
 
 //블록함수는 맨 마지막에 선언 (가독성을 위해)
-- (void)beginTaskWithName:(NSString *)name completion:(void(^)(void))callback;
+//- (void)beginTaskWithName:(NSString *)name completion:(void(^)(void))callback;
 @end
 

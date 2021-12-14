@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.stringTest;
     //    _modelLabel.text = self.deviceModelName;
     //
     //    //로그 출력
@@ -65,20 +65,20 @@
     }];
     
     
-    CompleteHandler2 blockTest2 = ^(NSString *result, NSError *error){
-        if([error  isEqual: @"E1001"]){
-            NSLog(@"문자에러");
-        }else if([error  isEqual: @"E1002"]){
-            NSLog(@"숫자에러");
-        }else{
-            NSLog(@"성공");
-        }
-    };
+    //    CompleteHandler2 blockTest2 = ^(NSString *result, NSError *error){
+    //        if([error  isEqual: @"E1001"]){
+    //            NSLog(@"문자에러");
+    //        }else if([error  isEqual: @"E1002"]){
+    //            NSLog(@"숫자에러");
+    //        }else{
+    //            NSLog(@"성공");
+    //        }
+    //    };
     
     //completionHandler
-    [self beginTaskWithName:@"MyTask" completion:^{
-       NSLog(@"The task is complete");
-    }];
+    //    [self beginTaskWithName:@"MyTask" completion:^{
+    //       NSLog(@"The task is complete");
+    //    }];
     
 }
 // - (void)exampleMethodName:(블록 선언이 들어갈 자리)블록 이름;
@@ -150,5 +150,28 @@
     testBlock();
 }
 
-@end
 
+- (void)stringTest{
+    NSString *str1 = @"hi";
+    NSString *str2 = @"hello";
+    
+    //compare 메소드 이용
+    NSComparisonResult result = [str1 compare:str2];
+    
+    //compare result 값들
+    switch (result) {
+        case NSOrderedAscending:
+            NSLog(@"str1이 str2보다 큽니다.");
+            break;
+        case NSOrderedSame:
+            NSLog(@"두 문자열이 같습니다.");
+            break;
+        case NSOrderedDescending:
+            NSLog(@"str1이 str2보다 작습니다");
+            break;
+        default:
+            break;
+    }
+}
+
+@end
