@@ -46,7 +46,20 @@ class FuncTableViewController: UITableViewController, Storyboarded {
         return cell
     }
     
-
+//셀선택시 실행되는 부분
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row{
+            //
+        case 0:
+            self.goDeviceApp(_url: "mailto")
+            
+        case 1:
+            break
+            
+        default:
+            break
+        }
+    }
     // [외부 앱 실행 실시]
     /*
      1. tel , mailto , sms , l 등을 사용해 디바이스 외부 앱을 수행할 수 있습니다
