@@ -15,29 +15,11 @@ class FirebaseViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Log that the view did load, CLSNSLogv is used here so the log message will be
-        // shown in the console output. If CLSLogv is used the message is not shown in
-        // the console output.
-//        Crashlytics.crashlytics().log("View loaded")
-//
-//        Crashlytics.crashlytics().setCustomValue(42, forKey: "MeaningOfLife")
-//        Crashlytics.crashlytics().setCustomValue("Test value", forKey: "last_UI_action")
-//
-//        let customKeysObject = [
-//            "locale" : getLocale(),
-//            "network_connection": getNetworkStatus(),
-//        ] as [String: Any]
-//        Crashlytics.crashlytics().setCustomKeysAndValues(customKeysObject)
-//
-//        updateAndTrackNetworkStatus()
-        
-        
     }
     
     @IBAction func initiateCrash(_ sender: AnyObject) {
         // [START log_and_crash_swift]
-//        Crashlytics.crashlytics().log("Cause Crash button clicked")
+        Crashlytics.crashlytics().log("Cause Crash button clicked")
         fatalError()
         // [END log_and_crash_swift]
     }
@@ -46,7 +28,6 @@ class FirebaseViewController: UIViewController, Storyboarded {
     
     @IBAction func customError(_ sender: Any) {
 //        Crashlytics.crashlytics().setUserID("customError")
-        
         let userInfo = [
             NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
             NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
@@ -54,7 +35,8 @@ class FirebaseViewController: UIViewController, Storyboarded {
             "ProductID": "123456",
             "UserID": "Leeyeon"
         ]
-        let error = NSError(domain: NSURLErrorDomain, code: -1001, userInfo: userInfo)
+        //record 메서드로 NSError 객체를 기록하여 심각하지 않은 예외 기록
+        let error = NSError(domain: NSCocoaErrorDomain, code: -1002, userInfo: userInfo)
         Crashlytics.crashlytics().record(error: error)
     }
     

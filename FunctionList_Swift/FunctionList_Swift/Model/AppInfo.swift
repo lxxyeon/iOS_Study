@@ -17,12 +17,12 @@ class AppInfo{
     
     
     func logAppseeUserId() {
-//        Crashlytics.crashlytics().setUserID("appdelegateID22")
-//        let customKeysObject = [
-//            "locale" : getLocale(),
-//            "network_connection": getNetworkStatus(),
-//        ] as [String: Any]
-//        Crashlytics.crashlytics().setCustomKeysAndValues(customKeysObject)
+        Crashlytics.crashlytics().setUserID("appdelegateID")
+        let customKeysObject = [
+            "locale" : getLocale(),
+            "network_connection": getNetworkStatus(),
+        ] as [String: Any]
+        Crashlytics.crashlytics().setCustomKeysAndValues(customKeysObject)
     }
     
     /**
