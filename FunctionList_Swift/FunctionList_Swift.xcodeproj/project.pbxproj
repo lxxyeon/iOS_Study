@@ -14,6 +14,7 @@
 		68762B002766DF31004AE299 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68762AFF2766DF31004AE299 /* AppInfo.swift */; };
 		68904711274D14BD00D7EC4C /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68904710274D14BC00D7EC4C /* ContainerViewController.swift */; };
 		68904C552768C04E008CF337 /* FuncTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68904C542768C04E008CF337 /* FuncTableViewController.swift */; };
+		68904C572768C929008CF337 /* FuncTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68904C562768C929008CF337 /* FuncTableViewCell.swift */; };
 		6894237927099E97009CA35C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894237827099E97009CA35C /* MainCoordinator.swift */; };
 		6894237B2709A2E5009CA35C /* SecondViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894237A2709A2E5009CA35C /* SecondViewCoordinator.swift */; };
 		6894237D2709AE2D009CA35C /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894237C2709AE2D009CA35C /* Storyboarded.swift */; };
@@ -57,6 +58,7 @@
 		68762AFF2766DF31004AE299 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		68904710274D14BC00D7EC4C /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		68904C542768C04E008CF337 /* FuncTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncTableViewController.swift; sourceTree = "<group>"; };
+		68904C562768C929008CF337 /* FuncTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncTableViewCell.swift; sourceTree = "<group>"; };
 		6894237827099E97009CA35C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		6894237A2709A2E5009CA35C /* SecondViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewCoordinator.swift; sourceTree = "<group>"; };
 		6894237C2709AE2D009CA35C /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				68904710274D14BC00D7EC4C /* ContainerViewController.swift */,
 				685168BA27634C3C0060243F /* FirebaseViewController.swift */,
 				68904C542768C04E008CF337 /* FuncTableViewController.swift */,
+				68904C562768C929008CF337 /* FuncTableViewCell.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				68BCD95A26C2557E00BF7283 /* XibViewController.swift in Sources */,
 				68BCD95B26C2557E00BF7283 /* AViewController.swift in Sources */,
 				68762B002766DF31004AE299 /* AppInfo.swift in Sources */,
+				68904C572768C929008CF337 /* FuncTableViewCell.swift in Sources */,
 				6894237D2709AE2D009CA35C /* Storyboarded.swift in Sources */,
 				68BCD9B726C272A400BF7283 /* SignUpViewController.swift in Sources */,
 				682EAC0C26C35D570063B8A6 /* Calculator.swift in Sources */,

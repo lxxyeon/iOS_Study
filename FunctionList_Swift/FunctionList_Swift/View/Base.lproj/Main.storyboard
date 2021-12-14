@@ -335,19 +335,35 @@
         <!--Func Table View Controller-->
         <scene sceneID="o3i-5b-cm3">
             <objects>
-                <tableViewController id="ReC-Fv-JgC" customClass="FuncTableViewController" customModule="FunctionList_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FuncTableViewController" id="ReC-Fv-JgC" customClass="FuncTableViewController" customModule="FunctionList_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="G6f-Wx-veg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PJl-P7-1rP">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="PJl-P7-1rP" customClass="FuncTableViewCell" customModule="FunctionList_Swift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PJl-P7-1rP" id="sHc-AQ-ojz">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cellTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esV-r4-Vjn">
+                                            <rect key="frame" x="30" y="11.5" width="354" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="esV-r4-Vjn" secondAttribute="trailing" constant="10" id="Aq7-Qu-0bS"/>
+                                        <constraint firstItem="esV-r4-Vjn" firstAttribute="leading" secondItem="sHc-AQ-ojz" secondAttribute="leadingMargin" constant="10" id="UzA-h0-xQc"/>
+                                        <constraint firstItem="esV-r4-Vjn" firstAttribute="centerY" secondItem="sHc-AQ-ojz" secondAttribute="centerY" id="hpx-kE-68s"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellTitle" destination="esV-r4-Vjn" id="Lc5-YQ-nQc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -361,7 +377,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1kY-5X-DRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="-579"/>
+            <point key="canvasLocation" x="49.275362318840585" y="-579.24107142857144"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="okj-h2-Dyp">
