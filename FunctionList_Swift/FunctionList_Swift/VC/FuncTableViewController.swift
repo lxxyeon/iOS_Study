@@ -42,11 +42,11 @@ class FuncTableViewController: UITableViewController, Storyboarded {
         let text: String = self.funcList[indexPath.row]
         
         cell.cellTitle.text = text
-
+        
         return cell
     }
     
-//셀선택시 실행되는 부분
+    //셀선택시 실행되는 부분
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row{
             //
@@ -70,6 +70,9 @@ class FuncTableViewController: UITableViewController, Storyboarded {
      6. 호출 예시 : goDeviceApp(_url: "tel:010-1234-5678")
      */
     func goDeviceApp(_url : String) {
+
+        let testString: String = "  "
+        print(testString.isEmpty)
         
         //스키마명을 사용해 외부앱 실행 실시 [사용가능한 url 확인]
         if let openApp = URL(string: _url), UIApplication.shared.canOpenURL(openApp) {
