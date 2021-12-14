@@ -13,6 +13,7 @@
 		685168BB27634C3C0060243F /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685168BA27634C3C0060243F /* FirebaseViewController.swift */; };
 		68762B002766DF31004AE299 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68762AFF2766DF31004AE299 /* AppInfo.swift */; };
 		68904711274D14BD00D7EC4C /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68904710274D14BC00D7EC4C /* ContainerViewController.swift */; };
+		68904C552768C04E008CF337 /* FuncTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68904C542768C04E008CF337 /* FuncTableViewController.swift */; };
 		6894237927099E97009CA35C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894237827099E97009CA35C /* MainCoordinator.swift */; };
 		6894237B2709A2E5009CA35C /* SecondViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894237A2709A2E5009CA35C /* SecondViewCoordinator.swift */; };
 		6894237D2709AE2D009CA35C /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894237C2709AE2D009CA35C /* Storyboarded.swift */; };
@@ -55,6 +56,7 @@
 		685168BA27634C3C0060243F /* FirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewController.swift; sourceTree = "<group>"; };
 		68762AFF2766DF31004AE299 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		68904710274D14BC00D7EC4C /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		68904C542768C04E008CF337 /* FuncTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncTableViewController.swift; sourceTree = "<group>"; };
 		6894237827099E97009CA35C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		6894237A2709A2E5009CA35C /* SecondViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewCoordinator.swift; sourceTree = "<group>"; };
 		6894237C2709AE2D009CA35C /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				68A93A7E272FBBE30073F97B /* testVC.swift */,
 				68904710274D14BC00D7EC4C /* ContainerViewController.swift */,
 				685168BA27634C3C0060243F /* FirebaseViewController.swift */,
+				68904C542768C04E008CF337 /* FuncTableViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				68BCD9BC26C2748700BF7283 /* AddInfoViewController.swift in Sources */,
 				68BCD9BA26C2730F00BF7283 /* UserInfo.swift in Sources */,
 				68BCD90726C2454E00BF7283 /* DeviceInfo.swift in Sources */,
+				68904C552768C04E008CF337 /* FuncTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

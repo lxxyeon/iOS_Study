@@ -54,7 +54,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
 //            window.rootViewController = AViewController()
-            window.rootViewController = FirebaseViewController()
+//            window.rootViewController = FirebaseViewController()
+            window.rootViewController = FuncTableViewController()
             self.window = window
             window.makeKeyAndVisible()
         }
