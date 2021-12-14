@@ -9,7 +9,7 @@ import UIKit
 
 class FuncTableViewController: UITableViewController, Storyboarded {
     
-    let funcList: [String] = ["urlScheme", "CrashTest"]
+    let funcList: [String] = ["urlScheme", "StringManaging", "Add"]
     let cellId: String = "cell"
     
     @IBOutlet var funcTableView: UITableView!
@@ -71,9 +71,7 @@ class FuncTableViewController: UITableViewController, Storyboarded {
      */
     func goDeviceApp(_url : String) {
 
-        let testString: String = "  "
-        print(testString.isEmpty)
-        
+
         //스키마명을 사용해 외부앱 실행 실시 [사용가능한 url 확인]
         if let openApp = URL(string: _url), UIApplication.shared.canOpenURL(openApp) {
             print("")
@@ -101,7 +99,11 @@ class FuncTableViewController: UITableViewController, Storyboarded {
         }
     }
     
-    
+    func StringTest() {
+        let testString: String = "  "
+        print("test : \(testString.isEmpty)")
+        
+    }
     
     /*
      // Override to support conditional editing of the table view.
