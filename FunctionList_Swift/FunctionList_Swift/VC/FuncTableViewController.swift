@@ -25,7 +25,6 @@ class FuncTableViewController: UITableViewController, Storyboarded {
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -51,7 +50,7 @@ class FuncTableViewController: UITableViewController, Storyboarded {
         switch indexPath.row{
             //
         case 0:
-            self.goDeviceApp(_url: "mailto")
+            self.goDeviceApp()
             
         case 1:
             break
@@ -60,6 +59,7 @@ class FuncTableViewController: UITableViewController, Storyboarded {
             break
         }
     }
+    
     // [외부 앱 실행 실시]
     /*
      1. tel , mailto , sms , l 등을 사용해 디바이스 외부 앱을 수행할 수 있습니다
@@ -69,17 +69,10 @@ class FuncTableViewController: UITableViewController, Storyboarded {
      5. 링크 이동 : https://naver.com
      6. 호출 예시 : goDeviceApp(_url: "tel:010-1234-5678")
      */
-    func goDeviceApp(_url : String) {
-
-
+    func goDeviceApp() {
         //스키마명을 사용해 외부앱 실행 실시 [사용가능한 url 확인]
+        let _url = "sms:"
         if let openApp = URL(string: _url), UIApplication.shared.canOpenURL(openApp) {
-            print("")
-            print("====================================")
-            print("[goDeviceApp : 디바이스 외부 앱 열기 수행]")
-            print("링크 주소 : \(_url)")
-            print("====================================")
-            print("")
             // 버전별 처리 실시
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(openApp, options: [:], completionHandler: nil)
@@ -90,64 +83,15 @@ class FuncTableViewController: UITableViewController, Storyboarded {
         }
         //스키마명을 사용해 외부앱 실행이 불가능한 경우
         else {
-            print("")
-            print("====================================")
             print("[goDeviceApp : 디바이스 외부 앱 열기 실패]")
             print("링크 주소 : \(_url)")
-            print("====================================")
-            print("")
         }
     }
     
     func StringTest() {
         let testString: String = "  "
         print("test : \(testString.isEmpty)")
-        
     }
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

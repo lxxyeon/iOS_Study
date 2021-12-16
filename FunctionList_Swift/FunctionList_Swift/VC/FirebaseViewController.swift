@@ -15,6 +15,11 @@ class FirebaseViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        fatalError()
+        //outofrange
+//        let list = [1, 2, 3]
+//        print("ddddddddddd\(list[10])") // nil
+
     }
     
     @IBAction func initiateCrash(_ sender: AnyObject) {
@@ -22,6 +27,9 @@ class FirebaseViewController: UIViewController, Storyboarded {
         Crashlytics.crashlytics().log("Cause Crash button clicked")
         fatalError()
         // [END log_and_crash_swift]
+        
+//        let list = [1, 2, 3]
+//        print("ddddddddddd\(list[10])") // nil
     }
     
     

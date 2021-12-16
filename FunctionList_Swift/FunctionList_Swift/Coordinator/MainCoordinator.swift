@@ -17,8 +17,8 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     }
 
     func start() {
-//        let vc = FirebaseViewController.instantiate()
-        let vc = FuncTableViewController.instantiate()
+        let vc = FirebaseViewController.instantiate()
+//        let vc = FuncTableViewController.instantiate()
 //        let vc = AViewController.instantiate()
 //        vc.coordinator = self
         
