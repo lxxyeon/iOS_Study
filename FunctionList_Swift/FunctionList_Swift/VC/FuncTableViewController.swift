@@ -70,7 +70,10 @@ class FuncTableViewController: UITableViewController, Storyboarded {
      */
     func urlSchemeTest() {
         //스키마명을 사용해 외부앱 실행 실시 [사용가능한 url 확인]
-        let _url = "sms:010-1234-5678"
+//        let _url = "sms://01090253394"
+//        let _url = "kakaotalk:"
+        let _url = "FunctionList_Objc:"
+
         if let openApp = URL(string: _url), UIApplication.shared.canOpenURL(openApp) {
             // 버전별 처리 실시
             if #available(iOS 10.0, *) {
