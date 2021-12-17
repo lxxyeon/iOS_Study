@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6801B66E276C47B200102AB2 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801B66C276C47B200102AB2 /* CustomViewController.m */; };
+		6801B66F276C47B200102AB2 /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6801B66D276C47B200102AB2 /* CustomViewController.xib */; };
+		6801B672276C498B00102AB2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6801B671276C498B00102AB2 /* SceneDelegate.m */; };
 		6828AAF226D4D128001C601A /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6828AAF126D4D128001C601A /* BViewController.m */; };
 		68BCD91926C24A1500BF7283 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BCD91826C24A1500BF7283 /* AppDelegate.m */; };
-		68BCD91C26C24A1500BF7283 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BCD91B26C24A1500BF7283 /* SceneDelegate.m */; };
 		68BCD91F26C24A1500BF7283 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BCD91E26C24A1500BF7283 /* ViewController.m */; };
 		68BCD92226C24A1500BF7283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68BCD92026C24A1500BF7283 /* Main.storyboard */; };
 		68BCD92426C24A1700BF7283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68BCD92326C24A1700BF7283 /* Assets.xcassets */; };
@@ -18,13 +20,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6801B66B276C47B200102AB2 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		6801B66C276C47B200102AB2 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		6801B66D276C47B200102AB2 /* CustomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomViewController.xib; sourceTree = "<group>"; };
+		6801B670276C498B00102AB2 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		6801B671276C498B00102AB2 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		6828AAF026D4D128001C601A /* BViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
 		6828AAF126D4D128001C601A /* BViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
 		68BCD91426C24A1500BF7283 /* FunctionList_Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionList_Objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68BCD91726C24A1500BF7283 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68BCD91826C24A1500BF7283 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		68BCD91A26C24A1500BF7283 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		68BCD91B26C24A1500BF7283 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		68BCD91D26C24A1500BF7283 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		68BCD91E26C24A1500BF7283 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		68BCD92126C24A1500BF7283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +66,9 @@
 				68BCD91E26C24A1500BF7283 /* ViewController.m */,
 				6828AAF026D4D128001C601A /* BViewController.h */,
 				6828AAF126D4D128001C601A /* BViewController.m */,
+				6801B66B276C47B200102AB2 /* CustomViewController.h */,
+				6801B66C276C47B200102AB2 /* CustomViewController.m */,
+				6801B66D276C47B200102AB2 /* CustomViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -88,8 +96,8 @@
 				6828AAEE26D4D0CA001C601A /* View */,
 				68BCD91726C24A1500BF7283 /* AppDelegate.h */,
 				68BCD91826C24A1500BF7283 /* AppDelegate.m */,
-				68BCD91A26C24A1500BF7283 /* SceneDelegate.h */,
-				68BCD91B26C24A1500BF7283 /* SceneDelegate.m */,
+				6801B670276C498B00102AB2 /* SceneDelegate.h */,
+				6801B671276C498B00102AB2 /* SceneDelegate.m */,
 				68BCD92326C24A1700BF7283 /* Assets.xcassets */,
 				68BCD92826C24A1700BF7283 /* Info.plist */,
 				68BCD92926C24A1700BF7283 /* main.m */,
@@ -156,6 +164,7 @@
 				68BCD92726C24A1700BF7283 /* LaunchScreen.storyboard in Resources */,
 				68BCD92426C24A1700BF7283 /* Assets.xcassets in Resources */,
 				68BCD92226C24A1500BF7283 /* Main.storyboard in Resources */,
+				6801B66F276C47B200102AB2 /* CustomViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,10 +176,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				68BCD91F26C24A1500BF7283 /* ViewController.m in Sources */,
+				6801B672276C498B00102AB2 /* SceneDelegate.m in Sources */,
+				6801B66E276C47B200102AB2 /* CustomViewController.m in Sources */,
 				68BCD91926C24A1500BF7283 /* AppDelegate.m in Sources */,
 				68BCD92A26C24A1700BF7283 /* main.m in Sources */,
 				6828AAF226D4D128001C601A /* BViewController.m in Sources */,
-				68BCD91C26C24A1500BF7283 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

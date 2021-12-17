@@ -12,14 +12,24 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *messageFromBVCLabel;
 @property (weak, nonatomic) IBOutlet UILabel *modelLabel;
-
+@property (nonatomic, strong) UILabel *label;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.stringTest;
+
+    self.view.backgroundColor = UIColor.whiteColor;
+    [self.view addSubview: self.label];
+    self.label.text = @"CustomWinodw";
+    self.label.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.label.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor];
+    [self.label.centerYAnchor constraintEqualToAnchor: self.view.centerYAnchor];
+    
+    
+    
+//    self.stringTest;
     //    _modelLabel.text = self.deviceModelName;
     //
     //    //로그 출력
