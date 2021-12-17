@@ -50,7 +50,7 @@ class FuncTableViewController: UITableViewController, Storyboarded {
         switch indexPath.row{
             //
         case 0:
-            self.goDeviceApp()
+            self.urlSchemeTest()
             
         case 1:
             break
@@ -62,16 +62,15 @@ class FuncTableViewController: UITableViewController, Storyboarded {
     
     // [외부 앱 실행 실시]
     /*
-     1. tel , mailto , sms , l 등을 사용해 디바이스 외부 앱을 수행할 수 있습니다
+     1. tel , mailto , sms , link 등을 사용해 디바이스 외부 앱을 수행할 수 있습니다
      2. 전화 걸기 : tel:010-1234-5678
      3. 메일 보내기 : mailto:honggildung@test.com
      4. 문자 보내기 : sms:010-5678-1234
      5. 링크 이동 : https://naver.com
-     6. 호출 예시 : goDeviceApp(_url: "tel:010-1234-5678")
      */
-    func goDeviceApp() {
+    func urlSchemeTest() {
         //스키마명을 사용해 외부앱 실행 실시 [사용가능한 url 확인]
-        let _url = "sms:"
+        let _url = "sms:010-1234-5678"
         if let openApp = URL(string: _url), UIApplication.shared.canOpenURL(openApp) {
             // 버전별 처리 실시
             if #available(iOS 10.0, *) {
