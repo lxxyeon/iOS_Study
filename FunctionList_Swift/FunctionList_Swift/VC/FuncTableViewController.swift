@@ -9,7 +9,7 @@ import UIKit
 
 class FuncTableViewController: UITableViewController, Storyboarded {
     
-    let funcList: [String] = ["urlScheme", "StringManaging", "Add"]
+    let funcList: [String] = ["urlSchemeTest", "FirebaseCrashlytics", "StringTest"]
     let cellId: String = "cell"
     
     @IBOutlet var funcTableView: UITableView!
@@ -48,12 +48,15 @@ class FuncTableViewController: UITableViewController, Storyboarded {
     //셀선택시 실행되는 부분
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row{
-            //
+            //url Scheme test
         case 0:
             self.urlSchemeTest()
-            
+            //Firebase Crashlytics
         case 1:
-            break
+            self.changeView(viewID: "FirebaseCrashlytics")
+            //StringTest
+        case 2:
+            self.StringTest()
             
         default:
             break
@@ -70,10 +73,10 @@ class FuncTableViewController: UITableViewController, Storyboarded {
      */
     func urlSchemeTest() {
         //스키마명을 사용해 외부앱 실행 실시 [사용가능한 url 확인]
-//        let _url = "sms://01090253394"
-//        let _url = "kakaotalk:"
+        //        let _url = "sms://01090253394"
+        //        let _url = "kakaotalk:"
         let _url = "FunctionList_Objc:"
-
+        
         if let openApp = URL(string: _url), UIApplication.shared.canOpenURL(openApp) {
             // 버전별 처리 실시
             if #available(iOS 10.0, *) {
@@ -95,5 +98,8 @@ class FuncTableViewController: UITableViewController, Storyboarded {
         print("test : \(testString.isEmpty)")
     }
     
+    func changeView(viewID : String) {
+        self.performSegue(withIdentifier: viewID, sender: nil)
+    }
     
 }
