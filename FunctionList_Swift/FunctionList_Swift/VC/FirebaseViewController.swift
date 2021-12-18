@@ -15,19 +15,15 @@ class FirebaseViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        fatalError()
-        //outofrange
-//        let list = [1, 2, 3]
-//        print("ddddddddddd\(list[10])") // nil
-
     }
     
     @IBAction func initiateCrash(_ sender: AnyObject) {
-        // [START log_and_crash_swift]
         Crashlytics.crashlytics().log("Cause Crash button clicked")
-        fatalError()
-        // [END log_and_crash_swift]
         
+        //강제종료 crash 발생시키기
+        fatalError()
+        
+        //outofrange crash 발생시키기
 //        let list = [1, 2, 3]
 //        print("ddddddddddd\(list[10])") // nil
     }
@@ -35,7 +31,6 @@ class FirebaseViewController: UIViewController, Storyboarded {
     
     
     @IBAction func customError(_ sender: Any) {
-//        Crashlytics.crashlytics().setUserID("customError")
         let userInfo = [
             NSLocalizedDescriptionKey: NSLocalizedString("The request failed.", comment: ""),
             NSLocalizedFailureReasonErrorKey: NSLocalizedString("The response returned a 404.", comment: ""),
