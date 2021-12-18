@@ -9,7 +9,7 @@ import UIKit
 
 class FuncTableViewController: UITableViewController, Storyboarded {
     
-    let funcList: [String] = ["urlSchemeTest", "FirebaseCrashlytics", "StringTest"]
+    let funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest"]
     let cellId: String = "cell"
     
     @IBOutlet var funcTableView: UITableView!

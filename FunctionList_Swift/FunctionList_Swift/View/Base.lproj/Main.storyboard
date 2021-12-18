@@ -289,16 +289,16 @@
             </objects>
             <point key="canvasLocation" x="787" y="88"/>
         </scene>
-        <!--FirebaseCrashlytics-->
+        <!--Firebase View Controller-->
         <scene sceneID="YyM-LN-jOH">
             <objects>
-                <viewController storyboardIdentifier="FirebaseViewController" title="FirebaseCrashlytics" id="zGv-hV-285" customClass="FirebaseViewController" customModule="FunctionList_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirebaseViewController" id="zGv-hV-285" customClass="FirebaseViewController" customModule="FunctionList_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="alE-8d-1nF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDn-Ji-CGe">
-                                <rect key="frame" x="139.5" y="107" width="135" height="31"/>
+                                <rect key="frame" x="139.5" y="63" width="135" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="YMo-g4-QoH"/>
                                 </constraints>
@@ -309,7 +309,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T24-bp-4ys">
-                                <rect key="frame" x="152" y="158" width="110" height="31"/>
+                                <rect key="frame" x="152" y="114" width="110" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Custom Error"/>
                                 <connections>
@@ -327,10 +327,11 @@
                             <constraint firstItem="T24-bp-4ys" firstAttribute="top" secondItem="lDn-Ji-CGe" secondAttribute="bottom" constant="20" id="xkx-6E-N4B"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="h4I-fL-AVq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyh-u1-kNU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-681" y="-572"/>
+            <point key="canvasLocation" x="-374" y="-630"/>
         </scene>
         <!--Func Table View Controller-->
         <scene sceneID="o3i-5b-cm3">
@@ -373,11 +374,12 @@
                     </tableView>
                     <connections>
                         <outlet property="funcTableView" destination="G6f-Wx-veg" id="w9h-kT-E3P"/>
+                        <segue destination="zGv-hV-285" kind="show" identifier="FirebaseCrashlytics" id="y6E-kt-EcY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1kY-5X-DRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49.275362318840585" y="-579.24107142857144"/>
+            <point key="canvasLocation" x="-1294" y="-630"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="okj-h2-Dyp">
