@@ -22,6 +22,8 @@ class FuncTableViewController: UITableViewController, Storyboarded {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//        let list = [1, 2, 3]
+//        print("ddddddddddd\(list[10])") // nil
     }
     
     // MARK: - Table view data source
