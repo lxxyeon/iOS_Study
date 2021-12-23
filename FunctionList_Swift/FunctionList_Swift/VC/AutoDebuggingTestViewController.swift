@@ -36,9 +36,11 @@ class AutoDebuggingTestViewController: UIViewController {
         UIApplication.shared.isIdleTimerDisabled = keepScreenOn
     }
     
+    //카메라 플래시 제어
     func toggleFlash() {
         //디바이스 정보 가져오기
         guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
+        //플래시를 지원한다면
         guard device.hasTorch else { return }
 
         do {
