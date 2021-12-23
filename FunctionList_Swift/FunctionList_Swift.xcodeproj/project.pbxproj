@@ -345,7 +345,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n\nfind ${DWARF_DSYM_FOLDER_PATH} -name \"*.dSYM\" | xargs -I \\{\\} $PODS_ROOT/FirebaseCrashlytics/upload-symbols -gsp $/Users/leeyeon2/Dev/01. iOS/iOS_Study/FunctionList_Swift/FunctionList_Swift/GoogleService-Info.plist -p ios \\{\\}\n";
+			shellScript = "
+";
 		};
 		719F32E17A920EAD8CB09CA7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

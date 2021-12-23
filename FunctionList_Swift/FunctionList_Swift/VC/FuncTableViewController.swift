@@ -9,7 +9,7 @@ import UIKit
 
 class FuncTableViewController: UITableViewController, Storyboarded {
     
-    let funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest"]
+    let funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness"]
     let cellId: String = "cell"
     
     @IBOutlet var funcTableView: UITableView!
@@ -59,6 +59,9 @@ class FuncTableViewController: UITableViewController, Storyboarded {
             //StringTest
         case 2:
             self.StringTest()
+            //screenBrightness
+        case 3:
+            self.changeView(viewID: "TestView")
             
         default:
             break
@@ -103,5 +106,6 @@ class FuncTableViewController: UITableViewController, Storyboarded {
     func changeView(viewID : String) {
         self.performSegue(withIdentifier: viewID, sender: nil)
     }
+    
     
 }
