@@ -182,6 +182,36 @@
         default:
             break;
     }
+
+}
+
+/**
+ * 스크린의 밝기를 최대로
+ */
++ (void)setScreenLightMax {
+    UIScreen *screen = [UIScreen mainScreen];
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    [defs setFloat:screen.brightness forKey:@"kScreenBrigthess"];
+    [defs synchronize];
+    [[UIScreen mainScreen] setBrightness:1.0];
+}
+
+/**
+ * 스크린 밝기를 복원
+ */
++ (void)setRestoreScreentLight {
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    CGFloat value = [defs floatForKey:@"kScreenBrigthess"];
+    [[UIScreen mainScreen] setBrightness:value];
+}
+
+/**
+ * 스크린 밝기를 리턴
+ */
++ (CGFloat)getScreenBrightness {
+    UIScreen *screen = [UIScreen mainScreen];
+    CGFloat value = screen.brightness;
+    return value;
 }
 
 @end

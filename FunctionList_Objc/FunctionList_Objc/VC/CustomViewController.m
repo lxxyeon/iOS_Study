@@ -39,8 +39,6 @@
     [label.heightAnchor constraintEqualToAnchor: self.view.heightAnchor multiplier:0.25].active = YES;
     [label.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
     [label.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
-    
-
 }
 
 @end
