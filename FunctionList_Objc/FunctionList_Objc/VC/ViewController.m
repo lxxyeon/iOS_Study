@@ -184,7 +184,14 @@
     }
 
 }
-
+/**
+ * 스크린의 밝기 조절
+ * input 값 : 0.0~1.0
+ */
++ (void)setScreenLight: (float)input {
+    float brightness = input / 100.0;
+    [[UIScreen mainScreen] setBrightness:brightness];
+}
 /**
  * 스크린의 밝기를 최대로
  */
