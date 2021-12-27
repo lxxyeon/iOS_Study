@@ -54,7 +54,7 @@ extension SignInAppleVC: ASAuthorizationControllerPresentationContextProviding, 
             print("User ID : \(userIdentifier)")
             print("User Email : \(email ?? "")")
             print("User Name : \((fullName?.givenName ?? "") + (fullName?.familyName ?? ""))")
-            print("token : \(tokeStr)")
+            print("token : \(String(describing: tokeStr))")
             
         default:
             break
