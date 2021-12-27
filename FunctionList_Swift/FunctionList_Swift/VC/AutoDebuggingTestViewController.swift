@@ -23,7 +23,6 @@ class AutoDebuggingTestViewController: UIViewController {
     //화면 밝기 조절
     @IBAction func brightnessChange(_ sender: UISlider) {
         let brightness = sender.value
-      
         let screen = UIScreen.main
         screen.brightness = CGFloat(brightness)
         //현재 밝기 출력

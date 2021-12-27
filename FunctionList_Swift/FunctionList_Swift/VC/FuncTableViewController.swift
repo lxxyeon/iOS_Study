@@ -9,7 +9,7 @@ import UIKit
 
 class FuncTableViewController: UITableViewController, Storyboarded {
     
-    let funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness"]
+    let funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness", "5. SignInApple"]
     let cellId: String = "cell"
     
     @IBOutlet var funcTableView: UITableView!
@@ -62,6 +62,9 @@ class FuncTableViewController: UITableViewController, Storyboarded {
             //screenBrightness
         case 3:
             self.changeView(viewID: "TestView")
+            //Apple SignIn
+        case 4:
+            self.changeView(viewID: "SignInAppleVC")
             
         default:
             break

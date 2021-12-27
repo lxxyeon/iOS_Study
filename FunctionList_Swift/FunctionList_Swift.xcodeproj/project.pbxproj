@@ -35,6 +35,7 @@
 		68BCD9BA26C2730F00BF7283 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BCD9B926C2730F00BF7283 /* UserInfo.swift */; };
 		68BCD9BC26C2748700BF7283 /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BCD9BB26C2748700BF7283 /* AddInfoViewController.swift */; };
 		68C8C9AB2709922B00CA2DD8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8C9AA2709922B00CA2DD8 /* Coordinator.swift */; };
+		68F06FAB277998E2008A9511 /* SignInAppleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F06FAA277998E2008A9511 /* SignInAppleVC.swift */; };
 		B3FF2065DED830893FA2440A /* Pods_FunctionList_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962A99CFF91CFF34A1FC63CA /* Pods_FunctionList_Swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		68BCD9B926C2730F00BF7283 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		68BCD9BB26C2748700BF7283 /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
 		68C8C9AA2709922B00CA2DD8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		68F06FAA277998E2008A9511 /* SignInAppleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleVC.swift; sourceTree = "<group>"; };
 		8301D244871F5CCEF466A553 /* Pods-FunctionList_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionList_Swift.release.xcconfig"; path = "Target Support Files/Pods-FunctionList_Swift/Pods-FunctionList_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		962A99CFF91CFF34A1FC63CA /* Pods_FunctionList_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunctionList_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67FE39AC674AC00177CD03B /* Pods-FunctionList_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionList_Swift.debug.xcconfig"; path = "Target Support Files/Pods-FunctionList_Swift/Pods-FunctionList_Swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				685168BA27634C3C0060243F /* FirebaseViewController.swift */,
 				68904C542768C04E008CF337 /* FuncTableViewController.swift */,
 				68904C562768C929008CF337 /* FuncTableViewCell.swift */,
+				68F06FAA277998E2008A9511 /* SignInAppleVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				68904711274D14BD00D7EC4C /* ContainerViewController.swift in Sources */,
 				68BCD95926C2557E00BF7283 /* AutoDebuggingTestViewController.swift in Sources */,
 				68BCD95C26C2557E00BF7283 /* BViewController.swift in Sources */,
+				68F06FAB277998E2008A9511 /* SignInAppleVC.swift in Sources */,
 				68BCD9BC26C2748700BF7283 /* AddInfoViewController.swift in Sources */,
 				68BCD9BA26C2730F00BF7283 /* UserInfo.swift in Sources */,
 				68BCD90726C2454E00BF7283 /* DeviceInfo.swift in Sources */,

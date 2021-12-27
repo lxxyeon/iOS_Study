@@ -218,8 +218,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep Screen On/Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-CJ-xxV">
-                                <rect key="frame" x="50" y="493" width="152" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-CJ-xxV">
+                                <rect key="frame" x="50" y="493" width="64" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="MmW-Zz-Omx"/>
                                     <constraint firstAttribute="height" constant="21" id="afJ-Lt-z6C"/>
@@ -269,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5X-Aq-dfi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1294" y="47"/>
+            <point key="canvasLocation" x="-1294" y="153"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JNf-JP-9it">
@@ -379,6 +379,48 @@
             </objects>
             <point key="canvasLocation" x="-374" y="-630"/>
         </scene>
+        <!--Sign In AppleVC-->
+        <scene sceneID="5aj-eK-EB4">
+            <objects>
+                <viewController id="ORc-gT-6VU" customClass="SignInAppleVC" customModule="FunctionList_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dIL-l2-Kkc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFh-hp-Pjc">
+                                <rect key="frame" x="100" y="100" width="214" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign in with Apple "/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Sign in with Apple " cornerStyle="fixed">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="appleLogin:" destination="ORc-gT-6VU" eventType="touchUpInside" id="j7s-Zb-djx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cJ0-sA-FSZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iFh-hp-Pjc" firstAttribute="leading" secondItem="cJ0-sA-FSZ" secondAttribute="leading" constant="100" id="arQ-q0-05K"/>
+                            <constraint firstItem="cJ0-sA-FSZ" firstAttribute="trailing" secondItem="iFh-hp-Pjc" secondAttribute="trailing" constant="100" id="pUG-zm-i4B"/>
+                            <constraint firstItem="iFh-hp-Pjc" firstAttribute="top" secondItem="cJ0-sA-FSZ" secondAttribute="top" constant="100" id="qqj-Gs-h5h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="osg-vc-QdJ"/>
+                    <connections>
+                        <outlet property="signInBtn" destination="iFh-hp-Pjc" id="cjo-1S-Gzm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ffe-0r-49l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1294" y="-1395"/>
+        </scene>
         <!--Func Table View Controller-->
         <scene sceneID="o3i-5b-cm3">
             <objects>
@@ -422,6 +464,7 @@
                         <outlet property="funcTableView" destination="G6f-Wx-veg" id="w9h-kT-E3P"/>
                         <segue destination="zGv-hV-285" kind="show" identifier="FirebaseCrashlytics" id="y6E-kt-EcY"/>
                         <segue destination="RSf-lf-uYZ" kind="show" identifier="TestView" id="mtf-5B-xEC"/>
+                        <segue destination="ORc-gT-6VU" kind="show" identifier="SignInAppleVC" id="S0J-v2-Oyp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1kY-5X-DRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
