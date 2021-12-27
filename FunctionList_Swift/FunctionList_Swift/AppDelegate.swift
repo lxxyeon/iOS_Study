@@ -70,6 +70,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 break
             }
         }
+        
+        //앱 실행 중 강제로 연결 취소 시
+        NotificationCenter.default.addObserver(forName: ASAuthorizationAppleIDProvider.credentialRevokedNotification, object: nil, queue: nil) { (Notification) in
+            print("Revoked Notification")
+            // 로그인 페이지로 이동
+        }
         return true
     }
     
