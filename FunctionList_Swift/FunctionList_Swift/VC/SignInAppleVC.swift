@@ -8,17 +8,16 @@
 import UIKit
 import AuthenticationServices
 
-class SignInAppleVC: UIViewController,ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate  {
+class SignInAppleVC: UIViewController  {
     @IBOutlet weak var signInBtn: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         signInBtn.setBackgroundColor(.black, for: .selected)
     }
     
-    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        return self.view.window!
-    }
+
     //애플 소셜 로그인
     @IBAction func appleLogin(_ sender: Any) {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -30,6 +29,15 @@ class SignInAppleVC: UIViewController,ASAuthorizationControllerPresentationConte
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
     }
+    
+}
+
+extension SignInAppleVC: ASAuthorizationControllerPresentationContextProviding, ASAuthorizationControllerDelegate{
+    
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
+    }
+    
     // Apple ID 연동 성공 시
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
@@ -40,10 +48,13 @@ class SignInAppleVC: UIViewController,ASAuthorizationControllerPresentationConte
             let userIdentifier = appleIDCredential.user
             let fullName = appleIDCredential.fullName
             let email = appleIDCredential.email
-            
+            let idToken = appleIDCredential.identityToken!
+            let tokeStr = String(data: idToken, encoding: .utf8)
+         
             print("User ID : \(userIdentifier)")
             print("User Email : \(email ?? "")")
             print("User Name : \((fullName?.givenName ?? "") + (fullName?.familyName ?? ""))")
+            print("token : \(tokeStr)")
             
         default:
             break
@@ -55,8 +66,6 @@ class SignInAppleVC: UIViewController,ASAuthorizationControllerPresentationConte
         // Handle error.
     }
 }
-
-
 
 extension UIButton {
     func setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
