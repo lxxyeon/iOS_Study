@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -26,6 +27,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        //google SignIn
+        guard let scheme = URLContexts.first?.url.scheme else { return }
+        if scheme.contains("com.googleusercontent.apps") {
+            GIDSignIn.sharedInstance.handle(URLContexts.first!.url)
+        }
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

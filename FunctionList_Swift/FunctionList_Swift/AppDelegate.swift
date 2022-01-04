@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import FirebaseCrashlytics
 import AuthenticationServices
+import GoogleSignIn
 
 let navController = UINavigationController()
 
@@ -76,6 +77,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Revoked Notification")
             // 로그인 페이지로 이동
         }
+        
+        // Google SignIn
+        // OAuth 2.0 클라이언트 ID
+        GIDSignIn.sharedInstance.clientID = "[클라이언트 ID].apps.googleusercontent.com"
         return true
     }
     
