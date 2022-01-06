@@ -80,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Google SignIn
         // OAuth 2.0 클라이언트 ID
-        GIDSignIn.sharedInstance.clientID = "[클라이언트 ID].apps.googleusercontent.com"
+//        GIDSignIn.sharedInstance.clientID = "[클라이언트 ID].apps.googleusercontent.com"
         return true
     }
     
