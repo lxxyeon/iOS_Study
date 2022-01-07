@@ -7,10 +7,11 @@
 
 import UIKit
 import AVFoundation
+import CommonCrypto
 
 class FuncTableViewController: UITableViewController, Storyboarded {
     
-    let funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness", "5. SignInApple", "6. Vibrate"]
+    let funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness", "5. SignInApple", "6. Vibrate", "7.SHA256"]
     let cellId: String = "cell"
     
     @IBOutlet var funcTableView: UITableView!
@@ -69,6 +70,9 @@ class FuncTableViewController: UITableViewController, Storyboarded {
             //vibrate
         case 5:
             UIDevice.vibrate()
+            //SHA256
+        case 6:
+            
         default:
             break
         }
@@ -112,11 +116,10 @@ class FuncTableViewController: UITableViewController, Storyboarded {
     func changeView(viewID : String) {
         self.performSegue(withIdentifier: viewID, sender: nil)
     }
-    
-    
+
 }
 
-// MARK: - [extension 정의 실시 : UIDevice]
+// MARK: - [extension 정의 실시 : UIDevice, Data, String]
 extension UIDevice {
     // [설명 : 디바이스 진동 기능 수행 메소드]
     // [필요 import : import AVFoundation]
@@ -127,3 +130,36 @@ extension UIDevice {
     }
 }
 
+extension Data{
+    public func sha256() -> String{
+        return hexStringFromData(input: digest(input: self as NSData))
+    }
+    
+    private func digest(input : NSData) -> NSData {
+        let digestLength = Int(CC_SHA256_DIGEST_LENGTH)
+        var hash = [UInt8](repeating: 0, count: digestLength)
+        CC_SHA256(input.bytes, UInt32(input.length), &hash)
+        return NSData(bytes: hash, length: digestLength)
+    }
+    
+    private  func hexStringFromData(input: NSData) -> String {
+        var bytes = [UInt8](repeating: 0, count: input.length)
+        input.getBytes(&bytes, length: input.length)
+        
+        var hexString = ""
+        for byte in bytes {
+            hexString += String(format:"%02x", UInt8(byte))
+        }
+        
+        return hexString
+    }
+}
+
+public extension String {
+    func sha256() -> String{
+        if let stringData = self.data(using: String.Encoding.utf8) {
+            return stringData.sha256()
+        }
+        return ""
+    }
+}
