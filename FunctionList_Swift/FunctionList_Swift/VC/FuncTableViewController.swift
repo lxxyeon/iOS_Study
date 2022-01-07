@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import AudioToolbox
+import AVFoundation
 
 class FuncTableViewController: UITableViewController, Storyboarded {
     
@@ -121,6 +121,7 @@ extension UIDevice {
     // [설명 : 디바이스 진동 기능 수행 메소드]
     // [필요 import : import AVFoundation]
     // [사용 방법 : UIDevice.vibrate()]
+    //단발성
     static func vibrate() {
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }
