@@ -11,7 +11,7 @@ import CommonCrypto
 
 class FuncTableViewController: UITableViewController, Storyboarded {
     
-    let funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness", "5. SignInApple", "6. Vibrate", "7.SHA256"]
+    var funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness", "5. SignInApple", "6. Vibrate", "7. SHA256"]
     let cellId: String = "cell"
     
     @IBOutlet var funcTableView: UITableView!
@@ -19,14 +19,8 @@ class FuncTableViewController: UITableViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "FuncTableViewController"
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-//        let list = [1, 2, 3]
-//        print("ddddddddddd\(list[10])") // nil
     }
+    
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,7 +66,10 @@ class FuncTableViewController: UITableViewController, Storyboarded {
             UIDevice.vibrate()
             //SHA256
         case 6:
-            
+            print("SHA256 해싱 이전 값 : \(funcList[6])")
+            funcList[6] = funcList[6].sha256()
+            funcTableView.reloadData()
+            print("SHA256 해싱 이후 값 : \(funcList[6])")
         default:
             break
         }
