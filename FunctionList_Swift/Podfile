@@ -12,6 +12,6 @@ pod 'Firebase/Crashlytics'
 pod 'ReachabilitySwift'
 pod 'GoogleSignIn'
 pod 'Firebase/DynamicLinks'
-
+pod 'Alamofire'
 
 end
