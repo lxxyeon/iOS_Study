@@ -16,3 +16,4 @@ class UserInfo{
     var phonenumber: String?
     var birth: String?
 }
+

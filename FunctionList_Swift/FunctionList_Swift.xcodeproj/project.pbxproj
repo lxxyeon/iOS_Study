@@ -38,6 +38,9 @@
 		68F06FAB277998E2008A9511 /* SignInAppleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F06FAA277998E2008A9511 /* SignInAppleVC.swift */; };
 		68F06FAD2780669A008A9511 /* MyInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F06FAC2780669A008A9511 /* MyInspector.swift */; };
 		68F373F3278C4066006411B4 /* HttpNetworkManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F373F2278C4066006411B4 /* HttpNetworkManagerViewController.swift */; };
+		68F373F5278C458B006411B4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F373F4278C458B006411B4 /* Config.swift */; };
+		68F373F7278C45D3006411B4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F373F6278C45D3006411B4 /* API.swift */; };
+		68F373F9278C4690006411B4 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F373F8278C4690006411B4 /* UserData.swift */; };
 		B3FF2065DED830893FA2440A /* Pods_FunctionList_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962A99CFF91CFF34A1FC63CA /* Pods_FunctionList_Swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +91,9 @@
 		68F06FAA277998E2008A9511 /* SignInAppleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleVC.swift; sourceTree = "<group>"; };
 		68F06FAC2780669A008A9511 /* MyInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInspector.swift; sourceTree = "<group>"; };
 		68F373F2278C4066006411B4 /* HttpNetworkManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpNetworkManagerViewController.swift; sourceTree = "<group>"; };
+		68F373F4278C458B006411B4 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		68F373F6278C45D3006411B4 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		68F373F8278C4690006411B4 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		8301D244871F5CCEF466A553 /* Pods-FunctionList_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionList_Swift.release.xcconfig"; path = "Target Support Files/Pods-FunctionList_Swift/Pods-FunctionList_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		962A99CFF91CFF34A1FC63CA /* Pods_FunctionList_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunctionList_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67FE39AC674AC00177CD03B /* Pods-FunctionList_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunctionList_Swift.debug.xcconfig"; path = "Target Support Files/Pods-FunctionList_Swift/Pods-FunctionList_Swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 			children = (
 				68BCD90626C2454E00BF7283 /* DeviceInfo.swift */,
 				682EAC0B26C35D570063B8A6 /* Calculator.swift */,
+				68F373F6278C45D3006411B4 /* API.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -214,6 +221,8 @@
 			children = (
 				68BCD9B926C2730F00BF7283 /* UserInfo.swift */,
 				68762AFF2766DF31004AE299 /* AppInfo.swift */,
+				68F373F4278C458B006411B4 /* Config.swift */,
+				68F373F8278C4690006411B4 /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -420,10 +429,12 @@
 				68F373F3278C4066006411B4 /* HttpNetworkManagerViewController.swift in Sources */,
 				68904C572768C929008CF337 /* FuncTableViewCell.swift in Sources */,
 				6894237D2709AE2D009CA35C /* Storyboarded.swift in Sources */,
+				68F373F7278C45D3006411B4 /* API.swift in Sources */,
 				68BCD9B726C272A400BF7283 /* SignUpViewController.swift in Sources */,
 				682EAC0C26C35D570063B8A6 /* Calculator.swift in Sources */,
 				68A5D39E270ED5D8001B2E02 /* SceneDelegate.swift in Sources */,
 				6894237927099E97009CA35C /* MainCoordinator.swift in Sources */,
+				68F373F5278C458B006411B4 /* Config.swift in Sources */,
 				68BCD8F326C244C500BF7283 /* AppDelegate.swift in Sources */,
 				685168BB27634C3C0060243F /* FirebaseViewController.swift in Sources */,
 				68C8C9AB2709922B00CA2DD8 /* Coordinator.swift in Sources */,
@@ -431,6 +442,7 @@
 				68904711274D14BD00D7EC4C /* ContainerViewController.swift in Sources */,
 				68BCD95926C2557E00BF7283 /* AutoDebuggingTestViewController.swift in Sources */,
 				68BCD95C26C2557E00BF7283 /* BViewController.swift in Sources */,
+				68F373F9278C4690006411B4 /* UserData.swift in Sources */,
 				68F06FAB277998E2008A9511 /* SignInAppleVC.swift in Sources */,
 				68BCD9BC26C2748700BF7283 /* AddInfoViewController.swift in Sources */,
 				68BCD9BA26C2730F00BF7283 /* UserInfo.swift in Sources */,
