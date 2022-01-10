@@ -11,7 +11,7 @@ import CommonCrypto
 
 class FuncTableViewController: UITableViewController, Storyboarded {
     
-    var funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness", "5. SignInApple", "6. Vibrate", "7. SHA256"]
+    var funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness", "5. SignInApple", "6. Vibrate", "7. SHA256", "8. Alamofire"]
     let cellId: String = "cell"
     
     @IBOutlet var funcTableView: UITableView!
@@ -70,6 +70,10 @@ class FuncTableViewController: UITableViewController, Storyboarded {
             funcList[6] = funcList[6].sha256()
             funcTableView.reloadData()
             print("SHA256 해싱 이후 값 : \(funcList[6])")
+            //Alamofire
+        case 7:
+            self.changeView(viewID: "httpNetworkVC")
+            
         default:
             break
         }

@@ -491,11 +491,28 @@
                         <segue destination="zGv-hV-285" kind="show" identifier="FirebaseCrashlytics" id="y6E-kt-EcY"/>
                         <segue destination="RSf-lf-uYZ" kind="show" identifier="TestView" id="mtf-5B-xEC"/>
                         <segue destination="ORc-gT-6VU" kind="show" identifier="SignInAppleVC" id="S0J-v2-Oyp"/>
+                        <segue destination="n8k-UE-ati" kind="show" identifier="httpNetworkVC" id="cSd-uj-mnT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1kY-5X-DRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1294" y="-630"/>
+        </scene>
+        <!--Http Network Manager View Controller-->
+        <scene sceneID="u6N-Kn-HBv">
+            <objects>
+                <viewController id="n8k-UE-ati" customClass="HttpNetworkManagerViewController" customModule="FunctionList_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UDo-xC-L0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gMG-K6-AKw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cT2-rJ-WUq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfV-vf-qOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="-1396"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="okj-h2-Dyp">
