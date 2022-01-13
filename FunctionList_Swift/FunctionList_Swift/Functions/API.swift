@@ -30,11 +30,11 @@ class API {
     private func monitorReachability() {
         reachability = NetworkReachabilityManager(host: "www.apple.com")
         
-        reachability.listener = { status in
-            print("Reachability Status Changed: \(status)")
-        }
-        
-        reachability.startListening()
+//        reachability.listener = { status in
+//            print("Reachability Status Changed: \(status)")
+//        }
+//
+//        reachability.startListening()
     }
     
     // 4
@@ -115,6 +115,18 @@ class API {
                 completionHandler(.success([UserData(userId: -1, id: -1, title: "DELETE", body: "SUCCESS")]))
             case .failure(let error):
                 completionHandler(.failure(error))
+            }
+        }
+    }
+    
+    func fetchData2(userName: String, completionHandler: @escaping (Result<UserData, AFError>) -> Void) {
+        self.request = AF.request("\(Config.baseURL)")
+        self.request?.responseDecodable { (response: DataResponse<UserData, AFError>) in
+            switch response.result {
+            case .success(let data):
+                completionHandler(.success(data))
+            case .failure(let err):
+                completionHandler(.failure(err))
             }
         }
     }
