@@ -60,23 +60,23 @@ extension HttpNetworkManagerViewController {
         API.shared.get1(completionHandler: handler)
     }
     
-    @IBAction private func GET2(_ sender: UIButton) {
-        API.shared.get2(completionHandler: handler)
-    }
-    
-    @IBAction private func POST(_ sender: UIButton) {
-        API.shared.post(completionHandler: handler)
-    }
-    
-    @IBAction private func PUT(_ sender: UIButton) {
-        API.shared.put(completionHandler: handler)
-    }
-    
-    @IBAction private func PATCH(_ sender: UIButton) {
-        API.shared.patch(completionHandler: handler)
-    }
-    
-    @IBAction private func DELETE(_ sender: UIButton) {
-        API.shared.delete(completionHandler: handler)
-    }
+//    @IBAction private func GET2(_ sender: UIButton) {
+//        API.shared.get2(completionHandler: handler)
+//    }
+//    
+//    @IBAction private func POST(_ sender: UIButton) {
+//        API.shared.post(completionHandler: handler)
+//    }
+//    
+//    @IBAction private func PUT(_ sender: UIButton) {
+//        API.shared.put(completionHandler: handler)
+//    }
+//    
+//    @IBAction private func PATCH(_ sender: UIButton) {
+//        API.shared.patch(completionHandler: handler)
+//    }
+//    
+//    @IBAction private func DELETE(_ sender: UIButton) {
+//        API.shared.delete(completionHandler: handler)
+//    }
 }

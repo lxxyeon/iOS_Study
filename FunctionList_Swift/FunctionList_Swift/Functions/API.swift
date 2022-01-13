@@ -40,7 +40,7 @@ class API {
     // 4
     func get1(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
         self.request = AF.request("\(Config.baseURL)/posts")
-        self.request?.responseDecodable { (response: DataResponse<[UserData]>) in
+        self.request?.responseDecodable { (response: DataResponse<[UserData], AFError>) in
             switch response.result {
             case .success(let userDatas):
                 completionHandler(.success(userDatas))
@@ -51,60 +51,60 @@ class API {
     }
     
     // 4-1
-    func get2(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
-        let parameters: Parameters = ["userId": 1]
-        self.request = AF.request("\(Config.baseURL)/posts", method: .get, parameters: parameters, encoding: URLEncoding.default)
-        self.request?.responseDecodable { (response: DataResponse<[UserData]>) in
-            switch response.result {
-            case .success(let userDatas):
-                completionHandler(.success(userDatas))
-            case .failure(let error):
-                completionHandler(.failure(error))
-            }
-        }
-    }
-    
-    // 5
-    func post(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
-        let userData = PostUserData()
-        self.request = AF.request("\(Config.baseURL)/posts", method: .post, parameters: userData)
-        self.request?.responseDecodable { (response: DataResponse<PostUserData>) in
-            switch response.result {
-            case .success(let userData):
-                completionHandler(.success([userData.toUserData()]))
-            case .failure(let error):
-                completionHandler(.failure(error))
-            }
-        }
-    }
-    
-    // 6
-    func put(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
-        let userData = PostUserData(id: 1)
-        self.request = AF.request("\(Config.baseURL)/posts/1", method: .put, parameters: userData)
-        self.request?.responseDecodable { (response: DataResponse<PostUserData>) in
-            switch response.result {
-            case .success(let userData):
-                completionHandler(.success([userData.toUserData()]))
-            case .failure(let error):
-                completionHandler(.failure(error))
-            }
-        }
-    }
+//    func get2(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
+//        let parameters: Parameters = ["userId": 1]
+//        self.request = AF.request("\(Config.baseURL)/posts", method: .get, parameters: parameters, encoding: URLEncoding.default)
+//        self.request?.responseDecodable { (response: DataResponse<[UserData]>) in
+//            switch response.result {
+//            case .success(let userDatas):
+//                completionHandler(.success(userDatas))
+//            case .failure(let error):
+//                completionHandler(.failure(error))
+//            }
+//        }
+//    }
+//
+//    // 5
+//    func post(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
+//        let userData = PostUserData()
+//        self.request = AF.request("\(Config.baseURL)/posts", method: .post, parameters: userData)
+//        self.request?.responseDecodable { (response: DataResponse<PostUserData>) in
+//            switch response.result {
+//            case .success(let userData):
+//                completionHandler(.success([userData.toUserData()]))
+//            case .failure(let error):
+//                completionHandler(.failure(error))
+//            }
+//        }
+//    }
+//
+//    // 6
+//    func put(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
+//        let userData = PostUserData(id: 1)
+//        self.request = AF.request("\(Config.baseURL)/posts/1", method: .put, parameters: userData)
+//        self.request?.responseDecodable { (response: DataResponse<PostUserData>) in
+//            switch response.result {
+//            case .success(let userData):
+//                completionHandler(.success([userData.toUserData()]))
+//            case .failure(let error):
+//                completionHandler(.failure(error))
+//            }
+//        }
+//    }
     
     // 7
-    func patch(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
-        let userData = PostUserData(id: 1)
-        self.request = AF.request("\(Config.baseURL)/posts/1", method: .patch, parameters: userData)
-        self.request?.responseDecodable { (response: DataResponse<PatchUserData>) in
-            switch response.result {
-            case .success(let userData):
-                completionHandler(.success([userData.toUserData()]))
-            case .failure(let error):
-                completionHandler(.failure(error))
-            }
-        }
-    }
+//    func patch(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
+//        let userData = PostUserData(id: 1)
+//        self.request = AF.request("\(Config.baseURL)/posts/1", method: .patch, parameters: userData)
+//        self.request?.responseDecodable { (response: DataResponse<PatchUserData>) in
+//            switch response.result {
+//            case .success(let userData):
+//                completionHandler(.success([userData.toUserData()]))
+//            case .failure(let error):
+//                completionHandler(.failure(error))
+//            }
+//        }
+//    }
     
     // 8
     func delete(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
