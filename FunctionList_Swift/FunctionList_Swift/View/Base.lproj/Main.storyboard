@@ -506,35 +506,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xh-D6-EFq">
-                                <rect key="frame" x="163" y="159" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
-                                <connections>
-                                    <action selector="GET1Action:" destination="n8k-UE-ati" eventType="touchUpInside" id="oSW-S9-ix9"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mej-YQ-xHi">
-                                <rect key="frame" x="175" y="248" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="axa-Zo-90i">
+                                <rect key="frame" x="100" y="50" width="214" height="283"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqu-Ux-pSL">
+                                        <rect key="frame" x="73" y="0.0" width="68" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="CREAT"/>
+                                        <connections>
+                                            <action selector="created:" destination="n8k-UE-ati" eventType="touchUpInside" id="g29-U2-VMm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xh-D6-EFq">
+                                        <rect key="frame" x="78" y="42" width="58" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="GET1"/>
+                                        <connections>
+                                            <action selector="GET1:" destination="n8k-UE-ati" eventType="touchUpInside" id="ZJf-gQ-OSj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIC-Hy-tBe">
+                                        <rect key="frame" x="77" y="84" width="60" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="GET2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3Y-c0-yjm">
+                                        <rect key="frame" x="76.5" y="126" width="61" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="POST"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOk-Q2-Y1u">
+                                        <rect key="frame" x="81" y="168" width="52" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="PUT"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhZ-dV-OpG">
+                                        <rect key="frame" x="72.5" y="210" width="69" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="PATCH"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSy-Wx-UTT">
+                                        <rect key="frame" x="69.5" y="252" width="75.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="DELETE"/>
+                                    </button>
+                                </subviews>
+                                <color key="tintColor" red="0.42745098040000001" green="0.35294117650000001" blue="0.89023774860000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Result : " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nKg-sG-LK1">
+                                <rect key="frame" x="20" y="343" width="374" height="455"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gMG-K6-AKw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gMG-K6-AKw" firstAttribute="trailing" secondItem="axa-Zo-90i" secondAttribute="trailing" constant="100" id="9z6-cw-zcm"/>
+                            <constraint firstItem="gMG-K6-AKw" firstAttribute="trailing" secondItem="nKg-sG-LK1" secondAttribute="trailing" constant="20" id="ICm-0D-rAR"/>
+                            <constraint firstItem="axa-Zo-90i" firstAttribute="top" secondItem="gMG-K6-AKw" secondAttribute="top" constant="50" id="RVV-VA-nPL"/>
+                            <constraint firstItem="gMG-K6-AKw" firstAttribute="bottom" secondItem="nKg-sG-LK1" secondAttribute="bottom" constant="10" id="aTi-Tg-KVA"/>
+                            <constraint firstItem="axa-Zo-90i" firstAttribute="leading" secondItem="gMG-K6-AKw" secondAttribute="leading" constant="100" id="hsy-Wj-7b9"/>
+                            <constraint firstItem="nKg-sG-LK1" firstAttribute="top" secondItem="axa-Zo-90i" secondAttribute="bottom" constant="10" id="nAK-bj-Rfy"/>
+                            <constraint firstItem="nKg-sG-LK1" firstAttribute="leading" secondItem="gMG-K6-AKw" secondAttribute="leading" constant="20" id="ux4-Ps-R7I"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cT2-rJ-WUq"/>
-                    <connections>
-                        <outlet property="GET1" destination="9xh-D6-EFq" id="Tfr-up-Azd"/>
-                        <outlet property="resultLabel" destination="mej-YQ-xHi" id="k5Q-6i-JWh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfV-vf-qOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-413" y="-1396"/>
+            <point key="canvasLocation" x="-413.04347826086962" y="-1396.2053571428571"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="okj-h2-Dyp">
