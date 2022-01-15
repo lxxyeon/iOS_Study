@@ -52,7 +52,7 @@ class HttpNetworkManagerViewController: UIViewController {
 
 extension HttpNetworkManagerViewController {
     @IBAction private func created(_ sender: UIButton) {
-        guard let url = URL(string: "https://github.com/kor45cw/") else { return }
+        guard let url = URL(string: "https://3.38.165.81:80") else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
