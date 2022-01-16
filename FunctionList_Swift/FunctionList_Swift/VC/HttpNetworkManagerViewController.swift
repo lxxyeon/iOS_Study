@@ -57,7 +57,10 @@ extension HttpNetworkManagerViewController {
     }
     
     @IBAction private func GET1(_ sender: UIButton) {
-        API.shared.get1(completionHandler: handler)
+        
+        print("test")
+        API.shared.requestAPI("Swift", 1)
+//        API.shared.get1(completionHandler: handler)
     }
     
 //    @IBAction private func GET2(_ sender: UIButton) {

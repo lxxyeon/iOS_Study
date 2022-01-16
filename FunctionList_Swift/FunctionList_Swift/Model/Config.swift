@@ -9,5 +9,6 @@ import Foundation
 
 struct Config {
 //    static let baseURL = "https://jsonplaceholder.typicode.com"
-    static let baseURL = "https://3.38.165.81:80"
+    static let baseURL = "https://api.itbook.store/1.0/"
+//    static let baseURL = "https://3.38.165.81:80"
 }
