@@ -14,6 +14,61 @@ final class API {
     // 1
     static let shared = API()
     
+    //post
+    func requestAccessTokenToLogIn(with username: String, password: String) {
+        let url = "https://3.38.165.81:80/sign-in"
+        let headers: HTTPHeaders = ["Accept" : "application/json"]
+        let parameters = ["username": username,
+                          "password": password]
+        AF.request(url, method: .post, parameters: parameters, headers: headers).responseJSON(){
+            response in
+            switch response.result {
+            case .success:
+                if let jsonObject = try! response.result.get() as? [String: Any] {
+                    if let accessToken = jsonObject["access_token"] as? String {
+                        self.getUser(accessToken: accessToken)
+                    }
+                }
+            case .failure(let error):
+                print(error)
+                return
+            }
+        }
+    }
+    
+    func getUser(accessToken: String) {
+        let url = "https://3.38.165.81:80/sign-in"
+        let headers: HTTPHeaders = ["Authorization" : "token \(accessToken)"]
+        AF.request(url, headers: headers).responseJSON(){
+            response in
+            switch response.result {
+            case .success:
+                //                    var user = UserData()
+                var user = UserModel()
+                if let jsonObject = try! response.result.get() as? [String: Any] {
+                    // 토큰 가져오기
+                    print(jsonObject["accessToken"] as! String)
+                }
+            case .failure(let error):
+                print(error)
+                return
+            }
+        }
+    }
+    func getAPI(){
+        AF.request("https://api.itbook.store/1.0/search/Swift/1").responseJSON() { response in
+          switch response.result {
+          case .success:
+            if let data = try! response.result.get() as? [String: Any] {
+              print(data)
+            }
+          case .failure(let error):
+            print("Error: \(error)")
+            return
+          }
+        }
+    }
+    
     func requestAPI(
         _ query: String,
         _ page: Int
@@ -25,34 +80,15 @@ final class API {
         if let urlEncoding = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed){
             //request
             AF.request(urlEncoding, method: .get)
-            //            AF.request(urlEncoding, method: .get, parameters: parameters, encoding: URLEncoding.queryString, headers: head)
-            //resposeJSON > responseString
                 .responseString{dataResponse in
                     print(dataResponse.result)
                     //                    switch dataResponse.result{
                     switch dataResponse.result{
                         //jsonData >> any Type
                     case .success(let jsonData)://잘 가져왔다면
-//                        do{
-//                            if let json = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any] {
-//                              if let name = json["name"] as? String {
-//                                print(name) // hyeon
-//                              }
-//                            }
-//                        }
-
-                        
-                        
                         do {
-//                            let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any]
-
+//                                                        let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any]
                             let json = try JSONSerialization.data(withJSONObject: jsonData, options: .prettyPrinted)
-                            
-//                            guard let json = try! JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-//                                             print(String(data: data, encoding: .utf8) ?? "Not string?!?")
-//                                             return
-//                                         }
-                            
                             let result = try JSONDecoder().decode(Books.self, from: json)
                             let books: [Book] = result.books
                             for book in books{
@@ -60,29 +96,29 @@ final class API {
                             }
                         }
                         catch{
-//                            print(error.localizedDescription)
+                            //                            print(error.localizedDescription)
                         }
                         print("jsonData: \(jsonData)")
                     case .failure:
                         print("실패")
                     }
                 }
-            
-            //                .responseDecodable{ (response: DataResponse<[UserData], AFError>) in
-            //                    print("jsonData: \(response.result)") // decodingFailed
-            //                    //                            print(response.result)
-            //                    switch response.result{
-            //                    case .success(let jsonData):
-            //                        //                                let decoded = try decoder.decode([UserData].self, from: data!)
-            //                        print("jsonData: \(jsonData)")
-            //                    case .failure(let error):
-            //                        print(error.localizedDescription)
-            //                    }
-            //
-            //                }
         }
     }
-    
+    func postAPI() {
+        AF.request("http://localhost:5000/test/post", method: .post, parameters: ["key": "hello!"], encoding: URLEncoding.httpBody).responseJSON() { response in
+          switch response.result {
+          case .success:
+            if let data = try! response.result.get() as? [String: Any] {
+              print(data)
+            }
+          case .failure(let error):
+            print("Error: \(error)")
+            return
+          }
+        }
+    }
+
     
     // 2
     private var request: DataRequest? {
@@ -179,17 +215,17 @@ final class API {
     //    }
     
     // 8
-    func delete(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
-        self.request = AF.request("\(Config.baseURL)/posts/1", method: .delete)
-        self.request?.response { response in
-            switch response.result {
-            case .success:
-                completionHandler(.success([UserData(userId: -1, id: -1, title: "DELETE", body: "SUCCESS")]))
-            case .failure(let error):
-                completionHandler(.failure(error))
-            }
-        }
-    }
+    //    func delete(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
+    //        self.request = AF.request("\(Config.baseURL)/posts/1", method: .delete)
+    //        self.request?.response { response in
+    //            switch response.result {
+    //            case .success:
+    //                completionHandler(.success([UserData(userId: -1, id: -1, title: "DELETE", body: "SUCCESS")]))
+    //            case .failure(let error):
+    //                completionHandler(.failure(error))
+    //            }
+    //        }
+    //    }
     
     func fetchData2(userName: String, completionHandler: @escaping (Result<UserData, AFError>) -> Void) {
         self.request = AF.request("\(Config.baseURL)")
