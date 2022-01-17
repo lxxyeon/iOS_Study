@@ -36,6 +36,7 @@
 		68BCD9BC26C2748700BF7283 /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BCD9BB26C2748700BF7283 /* AddInfoViewController.swift */; };
 		68C8C9AB2709922B00CA2DD8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8C9AA2709922B00CA2DD8 /* Coordinator.swift */; };
 		68D4385027942A460082BE11 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4384F27942A460082BE11 /* Books.swift */; };
+		68D43854279433CC0082BE11 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D43853279433CC0082BE11 /* UserModel.swift */; };
 		68F06FAB277998E2008A9511 /* SignInAppleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F06FAA277998E2008A9511 /* SignInAppleVC.swift */; };
 		68F06FAD2780669A008A9511 /* MyInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F06FAC2780669A008A9511 /* MyInspector.swift */; };
 		68F373F3278C4066006411B4 /* HttpNetworkManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F373F2278C4066006411B4 /* HttpNetworkManagerViewController.swift */; };
@@ -90,6 +91,7 @@
 		68BCD9BB26C2748700BF7283 /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
 		68C8C9AA2709922B00CA2DD8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		68D4384F27942A460082BE11 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		68D43853279433CC0082BE11 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		68F06FAA277998E2008A9511 /* SignInAppleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleVC.swift; sourceTree = "<group>"; };
 		68F06FAC2780669A008A9511 /* MyInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInspector.swift; sourceTree = "<group>"; };
 		68F373F2278C4066006411B4 /* HttpNetworkManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpNetworkManagerViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				68F373F4278C458B006411B4 /* Config.swift */,
 				68F373F8278C4690006411B4 /* UserData.swift */,
 				68D4384F27942A460082BE11 /* Books.swift */,
+				68D43853279433CC0082BE11 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				68A93A7F272FBBE30073F97B /* testVC.swift in Sources */,
 				68BCD95A26C2557E00BF7283 /* XibViewController.swift in Sources */,
 				68BCD95B26C2557E00BF7283 /* AViewController.swift in Sources */,
+				68D43854279433CC0082BE11 /* UserModel.swift in Sources */,
 				68F06FAD2780669A008A9511 /* MyInspector.swift in Sources */,
 				68762B002766DF31004AE299 /* AppInfo.swift in Sources */,
 				68F373F3278C4066006411B4 /* HttpNetworkManagerViewController.swift in Sources */,

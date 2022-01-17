@@ -110,8 +110,27 @@ class FuncTableViewController: UITableViewController, Storyboarded {
     }
     
     func StringTest() {
-        let testString: String = "  "
-        print("test : \(testString.isEmpty)")
+//        let testString: String = "  "
+//        print("test : \(testString.isEmpty)")
+        
+        //문자열 표현
+        let charachers: [Character] = ["T","E","S","T","!"]
+        let charString = String(charachers)
+        print(charString) //TEST!
+        
+        //문자열 찾기
+        //G
+        print(charString[charString.startIndex])
+        //!
+        print(charString[charString.index(before: charString.endIndex)])
+        //E
+        print(charString[charString.index(after: charString.startIndex)])
+        
+        let index = charString.index(charString.startIndex, offsetBy: 4)
+        //!
+        print(charString[index])
+        
+        
     }
     
     func changeView(viewID : String) {

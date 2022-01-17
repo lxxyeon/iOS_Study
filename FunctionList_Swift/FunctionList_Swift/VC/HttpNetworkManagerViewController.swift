@@ -22,7 +22,7 @@ class HttpNetworkManagerViewController: UIViewController {
             switch result {
             case .success(let userDatas):
                 guard let userData = userDatas.first else { return }
-                self.setInfo(by: userData)
+//                self.setInfo(by: userData)
             case .failure(let error):
                 print("Error", error.localizedDescription)
                 self.setError()
@@ -30,15 +30,15 @@ class HttpNetworkManagerViewController: UIViewController {
         }
     }
     
-    private func setInfo(by data: UserData) {
-        resultLabel.text = """
-                               ID: \(data.id)\n
-                               Title: \(data.title)\n
-                               UserId: \(data.userId)\n
-                               Body: \(data.body)\n
-                              """
-    }
-    
+//    private func setInfo(by data: UserData) {
+//        resultLabel.text = """
+//                               ID: \(data.id)\n
+//                               Title: \(data.title)\n
+//                               UserId: \(data.userId)\n
+//                               Body: \(data.body)\n
+//                              """
+//    }
+//
     private func setError() {
         resultLabel.text = """
                                ID: Error\n
@@ -59,7 +59,9 @@ extension HttpNetworkManagerViewController {
     @IBAction private func GET1(_ sender: UIButton) {
         
         print("test")
-        API.shared.requestAPI("Swift", 1)
+//        API.shared.requestAccessTokenToLogIn(with: "abc1234@naver.com", password: "qwerty1234")
+        API.shared.getAPI()
+//        API.shared.requestAPI("Swift", 1)
 //        API.shared.get1(completionHandler: handler)
     }
     
@@ -67,9 +69,9 @@ extension HttpNetworkManagerViewController {
 //        API.shared.get2(completionHandler: handler)
 //    }
 //    
-//    @IBAction private func POST(_ sender: UIButton) {
-//        API.shared.post(completionHandler: handler)
-//    }
+    @IBAction private func POST(_ sender: UIButton) {
+        API.shared.postAPI()
+    }
 //    
 //    @IBAction private func PUT(_ sender: UIButton) {
 //        API.shared.put(completionHandler: handler)
