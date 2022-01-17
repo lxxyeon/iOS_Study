@@ -507,7 +507,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="axa-Zo-90i">
-                                <rect key="frame" x="100" y="50" width="214" height="283"/>
+                                <rect key="frame" x="100" y="200" width="214" height="283"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqu-Ux-pSL">
                                         <rect key="frame" x="73" y="0.0" width="68" height="31"/>
@@ -557,22 +557,46 @@
                                 <color key="tintColor" red="0.42745098040000001" green="0.35294117650000001" blue="0.89023774860000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Result : " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nKg-sG-LK1">
-                                <rect key="frame" x="20" y="343" width="374" height="455"/>
+                                <rect key="frame" x="20" y="493" width="374" height="305"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZH-Lh-K3T">
+                                <rect key="frame" x="50" y="70" width="314" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="SingIn with APPLE">
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signInApple:" destination="n8k-UE-ati" eventType="touchUpInside" id="0c9-DB-Ku9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZN-NM-6LR">
+                                <rect key="frame" x="50" y="121" width="314" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SIgn In with Google"/>
+                                <connections>
+                                    <action selector="signInGoogle:" destination="n8k-UE-ati" eventType="touchUpInside" id="TlE-x2-AEj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gMG-K6-AKw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gMG-K6-AKw" firstAttribute="trailing" secondItem="axa-Zo-90i" secondAttribute="trailing" constant="100" id="9z6-cw-zcm"/>
+                            <constraint firstItem="qZH-Lh-K3T" firstAttribute="top" secondItem="gMG-K6-AKw" secondAttribute="top" constant="70" id="Hwi-m6-abg"/>
                             <constraint firstItem="gMG-K6-AKw" firstAttribute="trailing" secondItem="nKg-sG-LK1" secondAttribute="trailing" constant="20" id="ICm-0D-rAR"/>
-                            <constraint firstItem="axa-Zo-90i" firstAttribute="top" secondItem="gMG-K6-AKw" secondAttribute="top" constant="50" id="RVV-VA-nPL"/>
+                            <constraint firstItem="gMG-K6-AKw" firstAttribute="trailing" secondItem="zZN-NM-6LR" secondAttribute="trailing" constant="50" id="RAx-aN-4Fn"/>
+                            <constraint firstItem="axa-Zo-90i" firstAttribute="top" secondItem="gMG-K6-AKw" secondAttribute="top" constant="200" id="RVV-VA-nPL"/>
+                            <constraint firstItem="zZN-NM-6LR" firstAttribute="top" secondItem="qZH-Lh-K3T" secondAttribute="bottom" constant="20" id="SCf-FX-DVM"/>
+                            <constraint firstItem="zZN-NM-6LR" firstAttribute="leading" secondItem="gMG-K6-AKw" secondAttribute="leading" constant="50" id="SlJ-sD-z65"/>
+                            <constraint firstItem="gMG-K6-AKw" firstAttribute="trailing" secondItem="qZH-Lh-K3T" secondAttribute="trailing" constant="50" id="YFZ-ol-rPa"/>
                             <constraint firstItem="gMG-K6-AKw" firstAttribute="bottom" secondItem="nKg-sG-LK1" secondAttribute="bottom" constant="10" id="aTi-Tg-KVA"/>
                             <constraint firstItem="axa-Zo-90i" firstAttribute="leading" secondItem="gMG-K6-AKw" secondAttribute="leading" constant="100" id="hsy-Wj-7b9"/>
                             <constraint firstItem="nKg-sG-LK1" firstAttribute="top" secondItem="axa-Zo-90i" secondAttribute="bottom" constant="10" id="nAK-bj-Rfy"/>
+                            <constraint firstItem="qZH-Lh-K3T" firstAttribute="leading" secondItem="gMG-K6-AKw" secondAttribute="leading" constant="50" id="rui-ME-qpt"/>
                             <constraint firstItem="nKg-sG-LK1" firstAttribute="leading" secondItem="gMG-K6-AKw" secondAttribute="leading" constant="20" id="ux4-Ps-R7I"/>
                         </constraints>
                     </view>
@@ -866,7 +890,7 @@
     </scenes>
     <designables>
         <designable name="hPd-pi-yT1">
-            <size key="intrinsicContentSize" width="56" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
     </designables>
     <resources>

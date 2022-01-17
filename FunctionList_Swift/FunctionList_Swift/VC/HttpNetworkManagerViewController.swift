@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import GoogleSignIn
 
 // Alamofire 사용해서 Network 통신하기
 class HttpNetworkManagerViewController: UIViewController {
@@ -48,6 +49,16 @@ class HttpNetworkManagerViewController: UIViewController {
                               """
         
     }
+    
+    
+    @IBAction func signInApple(_ sender: Any) {
+    }
+    
+    
+    @IBAction func signInGoogle(_ sender: Any) {
+    }
+    
+    
 }
 
 extension HttpNetworkManagerViewController {
