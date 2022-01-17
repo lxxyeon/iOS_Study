@@ -130,7 +130,7 @@ class FuncTableViewController: UITableViewController, Storyboarded {
         //!
         print(charString[index])
         
-        
+        //스위피트 문자열 비교는 == 사용
     }
     
     func changeView(viewID : String) {
