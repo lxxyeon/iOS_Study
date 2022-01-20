@@ -36,6 +36,7 @@ final class API {
         }
     }
     
+    //get token
     func getUser(accessToken: String) {
         let url = "https://3.38.165.81:80/sign-in"
         let headers: HTTPHeaders = ["Authorization" : "token \(accessToken)"]
@@ -55,6 +56,8 @@ final class API {
             }
         }
     }
+    
+    //get
     func getAPI(){
         AF.request("https://api.itbook.store/1.0/search/Swift/1").responseJSON() { response in
           switch response.result {
@@ -69,6 +72,7 @@ final class API {
         }
     }
     
+    //get
     func requestAPI(
         _ query: String,
         _ page: Int
@@ -105,6 +109,8 @@ final class API {
                 }
         }
     }
+    
+    //post
     func postAPI() {
         AF.request("http://localhost:5000/test/post", method: .post, parameters: ["key": "hello!"], encoding: URLEncoding.httpBody).responseJSON() { response in
           switch response.result {
@@ -158,6 +164,19 @@ final class API {
         }
     }
     
+    func put(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
+        let userData = PostUserData(id: 1)
+        self.request = AF.request("\(Config.baseURL)/posts/1", method: .put, parameters: userData)
+        self.request?.responseDecodable {  (response: DataResponse<[UserData], AFError>)in
+            switch response.result {
+            case .success(let userData):
+                completionHandler(.success(userData))
+            case .failure(let error):
+                completionHandler(.failure(error))
+            }
+        }
+    }
+    
     // 4-1
     //    func get2(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
     //        let parameters: Parameters = ["userId": 1]
@@ -187,18 +206,7 @@ final class API {
     //    }
     //
     //    // 6
-    //    func put(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
-    //        let userData = PostUserData(id: 1)
-    //        self.request = AF.request("\(Config.baseURL)/posts/1", method: .put, parameters: userData)
-    //        self.request?.responseDecodable { (response: DataResponse<PostUserData>) in
-    //            switch response.result {
-    //            case .success(let userData):
-    //                completionHandler(.success([userData.toUserData()]))
-    //            case .failure(let error):
-    //                completionHandler(.failure(error))
-    //            }
-    //        }
-    //    }
+
     
     // 7
     //    func patch(completionHandler: @escaping (Result<[UserData], Error>) -> Void) {
