@@ -79,7 +79,8 @@ extension HttpNetworkManagerViewController {
 //    @IBAction private func GET2(_ sender: UIButton) {
 //        API.shared.get2(completionHandler: handler)
 //    }
-//    
+//
+    //회원가입
     @IBAction private func POST(_ sender: UIButton) {
         API.shared.postAPI()
     }

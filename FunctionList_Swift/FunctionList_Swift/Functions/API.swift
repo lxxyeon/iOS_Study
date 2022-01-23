@@ -110,9 +110,25 @@ final class API {
         }
     }
     
-    //post
+    //post - 회원가입
+    // "https://3.38.165.81:80/sign-up"
+//    "email" : "jaeyeonling@gmail.com",
+//    "password" : "PASSWORD",
+//    "name" : "김재연",
+//    "thumbnail" : "THUMBNAIL",
+//    "gender" : "MAN"
+//  }'
     func postAPI() {
-        AF.request("http://localhost:5000/test/post", method: .post, parameters: ["key": "hello!"], encoding: URLEncoding.httpBody).responseJSON() { response in
+        print("post!!!!!!")
+        let param: Parameters = [
+             "email" : "lxxyeon@gmail.com",
+             "password" : "PASSWORD",
+             "name" : "이연",
+             "thumbnail" : "THUMBNAIL",
+             "gender" : "MAN"
+         ]
+        
+        AF.request("https://3.38.165.81:80/sign-up", method: .post, parameters: param, encoding: URLEncoding.httpBody).responseJSON() { response in
           switch response.result {
           case .success:
             if let data = try! response.result.get() as? [String: Any] {
