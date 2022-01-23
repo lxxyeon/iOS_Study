@@ -507,31 +507,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="axa-Zo-90i">
-                                <rect key="frame" x="100" y="200" width="214" height="283"/>
+                                <rect key="frame" x="100" y="200" width="214" height="199"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqu-Ux-pSL">
-                                        <rect key="frame" x="73" y="0.0" width="68" height="31"/>
+                                        <rect key="frame" x="69" y="0.0" width="76.5" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="CREAT"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="CREATE"/>
                                         <connections>
+                                            <action selector="CREATE:" destination="n8k-UE-ati" eventType="touchUpInside" id="P4v-li-fik"/>
                                             <action selector="created:" destination="n8k-UE-ati" eventType="touchUpInside" id="g29-U2-VMm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xh-D6-EFq">
-                                        <rect key="frame" x="78" y="42" width="58" height="31"/>
+                                        <rect key="frame" x="81.5" y="42" width="51.5" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="GET1"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="GET"/>
                                         <connections>
                                             <action selector="GET1:" destination="n8k-UE-ati" eventType="touchUpInside" id="ZJf-gQ-OSj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIC-Hy-tBe">
-                                        <rect key="frame" x="77" y="84" width="60" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="GET2"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3Y-c0-yjm">
-                                        <rect key="frame" x="76.5" y="126" width="61" height="31"/>
+                                        <rect key="frame" x="76.5" y="84" width="61" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="POST"/>
                                         <connections>
@@ -539,25 +535,26 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOk-Q2-Y1u">
-                                        <rect key="frame" x="81" y="168" width="52" height="31"/>
+                                        <rect key="frame" x="81" y="126" width="52" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="PUT"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhZ-dV-OpG">
-                                        <rect key="frame" x="72.5" y="210" width="69" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="PATCH"/>
+                                        <connections>
+                                            <action selector="PUT:" destination="n8k-UE-ati" eventType="touchUpInside" id="A6z-Js-nSZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSy-Wx-UTT">
-                                        <rect key="frame" x="69.5" y="252" width="75.5" height="31"/>
+                                        <rect key="frame" x="69.5" y="168" width="75.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="DELETE"/>
+                                        <connections>
+                                            <action selector="DELETE:" destination="n8k-UE-ati" eventType="touchUpInside" id="r48-Fg-I1P"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="tintColor" red="0.42745098040000001" green="0.35294117650000001" blue="0.89023774860000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Result : " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nKg-sG-LK1">
-                                <rect key="frame" x="20" y="493" width="374" height="305"/>
+                                <rect key="frame" x="20" y="409" width="374" height="389"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -890,7 +887,7 @@
     </scenes>
     <designables>
         <designable name="hPd-pi-yT1">
-            <size key="intrinsicContentSize" width="56" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
     </designables>
     <resources>

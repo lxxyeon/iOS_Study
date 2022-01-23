@@ -51,6 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navController
         //        window?.makeKeyAndVisible()
+//        FirebaseApp 객체를 초기화
         FirebaseApp.configure()
         
         //applelogin 확인

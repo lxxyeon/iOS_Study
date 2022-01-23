@@ -10,9 +10,31 @@ import Alamofire
 
 //네트워크 통신
 final class API {
-    
-    // 1
+
     static let shared = API()
+    
+    
+    //CREAT TEST
+    
+    
+    //GET TEST
+    func getAPI(){
+        AF.request("https://api.itbook.store/1.0/search/Swift/1").responseJSON() { response in
+          switch response.result {
+          case .success:
+            if let data = try! response.result.get() as? [String: Any] {
+              print(data)
+            }
+          case .failure(let error):
+            print("Error: \(error)")
+            return
+          }
+        }
+    }
+    
+    //POST TEST
+    
+    
     
     //post
     func requestAccessTokenToLogIn(with username: String, password: String) {
@@ -57,21 +79,7 @@ final class API {
         }
     }
     
-    //get
-    func getAPI(){
-        AF.request("https://api.itbook.store/1.0/search/Swift/1").responseJSON() { response in
-          switch response.result {
-          case .success:
-            if let data = try! response.result.get() as? [String: Any] {
-              print(data)
-            }
-          case .failure(let error):
-            print("Error: \(error)")
-            return
-          }
-        }
-    }
-    
+
     //get
     func requestAPI(
         _ query: String,
