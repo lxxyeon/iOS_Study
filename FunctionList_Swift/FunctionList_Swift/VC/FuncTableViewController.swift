@@ -10,8 +10,9 @@ import AVFoundation
 import CommonCrypto
 
 class FuncTableViewController: UITableViewController, Storyboarded {
+    var sha256Test = "sha256Test"
     
-    var funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness", "5. SignInApple", "6. Vibrate", "7. SHA256", "8. Alamofire"]
+    var funcList: [String] = ["1. urlSchemeTest", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness", "5. SignInApple", "6. Vibrate", "sha256Test", "8. Alamofire"]
     let cellId: String = "cell"
     
     @IBOutlet var funcTableView: UITableView!
@@ -66,10 +67,10 @@ class FuncTableViewController: UITableViewController, Storyboarded {
             UIDevice.vibrate()
             //SHA256
         case 6:
-            print("SHA256 해싱 이전 값 : \(funcList[6])")
-            funcList[6] = funcList[6].sha256()
+            print("SHA256 해싱 이전 값 : \(sha256Test)")
+            sha256Test = sha256Test.sha256()
             funcTableView.reloadData()
-            print("SHA256 해싱 이후 값 : \(funcList[6])")
+            print("SHA256 해싱 이후 값 : \(sha256Test)")
             //Alamofire
         case 7:
             self.changeView(viewID: "httpNetworkVC")
