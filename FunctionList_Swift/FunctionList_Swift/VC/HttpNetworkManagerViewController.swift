@@ -62,6 +62,14 @@ class HttpNetworkManagerViewController: UIViewController {
           guard error == nil else { return }
             guard let user = user else { return }
             
+            // 사용자 정보
+            let userId = user.userID
+            let idToken = user.authentication.idToken
+//            let fullName = user.profile.name
+//            let givenName = user.profile.givenName
+//            let familyName = user.profile.familyName
+//            let email = user.profile.email
+
             guard let accessToken = user.authentication.idToken, let _ = user.profile?.name else {
                         print("Error : User Data Not Found"); return }
             
@@ -72,6 +80,12 @@ class HttpNetworkManagerViewController: UIViewController {
         }
     }
     
+    //구글 버튼 설정
+    func setGoogleSignInButton(){
+//        GIDSignIn.sharedInstance()?.presentingViewController = self
+//        GIDSignIn.sharedInstance().delegate = self
+//        googleSignInButton.style = .standard // .wide .iconOnly
+    }
     
 }
 
