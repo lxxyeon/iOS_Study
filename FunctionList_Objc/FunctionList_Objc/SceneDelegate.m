@@ -16,10 +16,10 @@
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
 //스토리보드 삭제 후 class UI
-    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.windowScene = (UIWindowScene *)scene;
-    self.window.rootViewController = [CustomViewController new];
-    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window.windowScene = (UIWindowScene *)scene;
+//    self.window.rootViewController = [CustomViewController new];
+//    [self.window makeKeyAndVisible];
 }
 
 
