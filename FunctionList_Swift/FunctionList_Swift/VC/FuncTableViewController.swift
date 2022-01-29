@@ -92,7 +92,7 @@ class FuncTableViewController: UITableViewController, Storyboarded {
         //스키마명을 사용해 외부앱 실행 실시 [사용가능한 url 확인]
         //        let _url = "sms://01090253394"
         //        let _url = "kakaotalk:"
-        let _url = "FunctionList_Objc:"
+        let _url = "kakaotalk:"
         
         if let openApp = URL(string: _url), UIApplication.shared.canOpenURL(openApp) {
             // 버전별 처리 실시
