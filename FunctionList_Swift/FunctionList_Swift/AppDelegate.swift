@@ -46,10 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // MainCoordinator로 첫 화면 시작
-        mainCoodinator = MainCoordinator(navigationController: navController)
-        mainCoodinator?.start()
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navController
+//        mainCoodinator = MainCoordinator(navigationController: navController)
+//        mainCoodinator?.start()
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.rootViewController = navController
         //        window?.makeKeyAndVisible()
 //        FirebaseApp 객체를 초기화
         FirebaseApp.configure()
