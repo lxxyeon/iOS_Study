@@ -7,16 +7,26 @@
 
 import UIKit
 
-class TestViewController: UIViewController, Storyboarded {
+class TestViewController: UIViewController {
 
+    @IBOutlet weak var schemeBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        schemeBtn.layer.cornerRadius = 15
     }
 
-    @IBAction func schemeTest(_ sender: Any) {
-        
+
+    @IBAction func schemeTest(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected == true{
+            schemeBtn.setBackgroundColor(.systemYellow, for: .normal)
+            schemeBtn.layer.cornerRadius = 15
+        }else{
+            schemeBtn.setBackgroundColor(.lightGray, for: .normal)
+            
+            schemeBtn.layer.cornerRadius = 15
+        }
         //스키마명을 사용해 외부앱 실행 실시 [사용가능한 url 확인]
         //        let _url = "sms://01090253394"
         //        let _url = "kakaotalk:"
@@ -37,4 +47,6 @@ class TestViewController: UIViewController, Storyboarded {
             print("링크 주소 : \(_url)")
         }
     }
+    
 }
+
