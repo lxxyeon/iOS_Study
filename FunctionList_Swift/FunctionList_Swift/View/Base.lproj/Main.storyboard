@@ -388,14 +388,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-RN-X0a">
-                                <rect key="frame" x="130" y="175" width="154" height="50"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <rect key="frame" x="100" y="175" width="214" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DDQ-4d-x96"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="KAKAO OPEN">
+                                <buttonConfiguration key="configuration" style="gray" title="KAKAO OPEN" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -406,8 +408,8 @@
                         <viewLayoutGuide key="safeArea" id="JAT-za-C8x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JAT-za-C8x" firstAttribute="trailing" secondItem="aJh-RN-X0a" secondAttribute="trailing" constant="130" id="JyB-1a-cRJ"/>
-                            <constraint firstItem="aJh-RN-X0a" firstAttribute="leading" secondItem="JAT-za-C8x" secondAttribute="leading" constant="130" id="g3U-5K-DZ7"/>
+                            <constraint firstItem="JAT-za-C8x" firstAttribute="trailing" secondItem="aJh-RN-X0a" secondAttribute="trailing" constant="100" id="JyB-1a-cRJ"/>
+                            <constraint firstItem="aJh-RN-X0a" firstAttribute="leading" secondItem="JAT-za-C8x" secondAttribute="leading" constant="100" id="g3U-5K-DZ7"/>
                             <constraint firstItem="aJh-RN-X0a" firstAttribute="top" secondItem="JAT-za-C8x" secondAttribute="top" constant="131" id="xpQ-GL-RdA"/>
                         </constraints>
                     </view>
