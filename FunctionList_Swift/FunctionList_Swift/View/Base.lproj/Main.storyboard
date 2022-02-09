@@ -389,7 +389,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-RN-X0a" customClass="MyInspector" customModule="FunctionList_Swift" customModuleProvider="target">
                                 <rect key="frame" x="100" y="175" width="214" height="50"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DDQ-4d-x96"/>
                                 </constraints>
@@ -408,7 +408,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="schemeTest:" destination="hfy-hn-UDM" eventType="touchUpInside" id="vnc-6u-Gj0"/>
+                                    <action selector="appleSignin:" destination="hfy-hn-UDM" eventType="touchUpInside" id="6zG-nM-3vg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -426,7 +426,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIa-h6-2wa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2239" y="-1396"/>
+            <point key="canvasLocation" x="-2239.130434782609" y="-1396.2053571428571"/>
         </scene>
         <!--Sign In AppleVC-->
         <scene sceneID="5aj-eK-EB4">
@@ -936,7 +936,7 @@
     </scenes>
     <designables>
         <designable name="hPd-pi-yT1">
-            <size key="intrinsicContentSize" width="56" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
     </designables>
     <resources>
@@ -949,6 +949,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

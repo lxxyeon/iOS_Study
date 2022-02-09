@@ -52,6 +52,7 @@ class HttpNetworkManagerViewController: UIViewController {
     
     
     @IBAction func signInApple(_ sender: Any) {
+        
     }
     
     
