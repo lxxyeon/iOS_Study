@@ -9,14 +9,15 @@ import UIKit
 import AuthenticationServices
 
 class TestViewController: UIViewController {
-
+    
     @IBOutlet weak var schemeBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         schemeBtn.layer.cornerRadius = 15
+        self.setupProviderLoginView()
     }
-
+    
     @IBAction func appleSignin(_ sender: Any) {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
@@ -81,7 +82,7 @@ extension TestViewController: ASAuthorizationControllerPresentationContextProvid
             let email = appleIDCredential.email
             let idToken = appleIDCredential.identityToken!
             let tokeStr = String(data: idToken, encoding: .utf8)
-         
+            
             print("User ID : \(userIdentifier)")
             print("User Email : \(email ?? "")")
             print("User Name : \((fullName?.givenName ?? "") + (fullName?.familyName ?? ""))")
@@ -96,4 +97,27 @@ extension TestViewController: ASAuthorizationControllerPresentationContextProvid
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
     }
+    
+    func setupProviderLoginView() {
+        let appleButton = ASAuthorizationAppleIDButton(type: .signIn, style: .whiteOutline)
+        appleButton.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: .touchUpInside)
+        self.view.addSubview(appleButton)
+        appleButton.translatesAutoresizingMaskIntoConstraints = false
+        appleButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        appleButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        appleButton.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        appleButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        
+    }
+    @objc func handleAuthorizationAppleIDButtonPress() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+    
+    
 }

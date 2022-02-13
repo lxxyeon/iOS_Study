@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        FirebaseApp 객체를 초기화
         FirebaseApp.configure()
         
-        //applelogin 확인
+        //applelogin 상태 확인
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         //forUserID = userIdentifier
         appleIDProvider.getCredentialState(forUserID: "001281.9301aaa1f617423c9c7a64b671b6eb84.0758") { (credentialState, error) in
