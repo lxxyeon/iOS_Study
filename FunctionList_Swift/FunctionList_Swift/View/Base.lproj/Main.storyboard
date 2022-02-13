@@ -382,7 +382,7 @@
         <!--Test View Controller-->
         <scene sceneID="q8h-MB-y9d">
             <objects>
-                <viewController id="hfy-hn-UDM" customClass="TestViewController" customModule="FunctionList_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Test" id="hfy-hn-UDM" customClass="TestViewController" customModule="FunctionList_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NTx-kw-jmv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -426,7 +426,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIa-h6-2wa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2239.130434782609" y="-1396.2053571428571"/>
+            <point key="canvasLocation" x="-3223" y="-1396"/>
+        </scene>
+        <!--Pop UpVC-->
+        <scene sceneID="rme-Id-tpo">
+            <objects>
+                <viewController storyboardIdentifier="PopupVC" id="B6f-ZD-7eQ" customClass="PopUpVC" customModule="FunctionList_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bTD-XN-rmh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsc-HA-c1U">
+                                <rect key="frame" x="80" y="294" width="254" height="318"/>
+                                <color key="backgroundColor" red="0.60412872969999998" green="0.72533008450000003" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kQk-uz-E8a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wsc-HA-c1U" firstAttribute="leading" secondItem="kQk-uz-E8a" secondAttribute="leading" constant="80" id="5Fd-3W-nwa"/>
+                            <constraint firstItem="wsc-HA-c1U" firstAttribute="top" secondItem="kQk-uz-E8a" secondAttribute="top" constant="250" id="T0r-vL-bHs"/>
+                            <constraint firstItem="kQk-uz-E8a" firstAttribute="trailing" secondItem="wsc-HA-c1U" secondAttribute="trailing" constant="80" id="Wjv-k7-ETh"/>
+                            <constraint firstItem="kQk-uz-E8a" firstAttribute="bottom" secondItem="wsc-HA-c1U" secondAttribute="bottom" constant="250" id="oCm-PA-ThW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoView" destination="wsc-HA-c1U" id="SqO-OT-wIq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCC-1x-snc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2385" y="-1395"/>
         </scene>
         <!--Sign In AppleVC-->
         <scene sceneID="5aj-eK-EB4">
@@ -936,7 +966,7 @@
     </scenes>
     <designables>
         <designable name="hPd-pi-yT1">
-            <size key="intrinsicContentSize" width="56" height="34"/>
+            <size key="intrinsicContentSize" width="32" height="34"/>
         </designable>
     </designables>
     <resources>

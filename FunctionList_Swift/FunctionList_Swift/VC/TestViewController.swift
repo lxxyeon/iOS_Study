@@ -14,7 +14,7 @@ class TestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        schemeBtn.layer.cornerRadius = 15
+        //        schemeBtn.layer.cornerRadius = 15
         self.setupProviderLoginView()
     }
     
@@ -98,8 +98,12 @@ extension TestViewController: ASAuthorizationControllerPresentationContextProvid
                 UserDefaults.standard.set("PASSWORD", forKey: "pw")
                 
                 
+                let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+                let popupVC = storyBoard.instantiateViewController(withIdentifier: "PopupVC")
+                popupVC.modalPresentationStyle = .overFullScreen
+                present(popupVC, animated: false, completion: nil)
             }
-
+            
         default:
             break
         }

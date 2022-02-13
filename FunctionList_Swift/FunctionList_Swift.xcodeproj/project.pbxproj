@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68139E5727B92591005382FC /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68139E5627B92591005382FC /* PopUpVC.swift */; };
 		682EAC0C26C35D570063B8A6 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EAC0B26C35D570063B8A6 /* Calculator.swift */; };
 		682EAC1426C35D7D0063B8A6 /* FunctionList_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EAC1326C35D7D0063B8A6 /* FunctionList_SwiftTests.swift */; };
 		682EAC1C26C35D9E0063B8A6 /* CalculatorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EAC1B26C35D9E0063B8A6 /* CalculatorAppTests.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68139E5627B92591005382FC /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		682EAC0B26C35D570063B8A6 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		682EAC1126C35D7D0063B8A6 /* FunctionList_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionList_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		682EAC1326C35D7D0063B8A6 /* FunctionList_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionList_SwiftTests.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				68F06FAA277998E2008A9511 /* SignInAppleVC.swift */,
 				68F373F2278C4066006411B4 /* HttpNetworkManagerViewController.swift */,
 				68BE509B27B2A2AA00EBA382 /* TestViewController.swift */,
+				68139E5627B92591005382FC /* PopUpVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				68BCD95C26C2557E00BF7283 /* BViewController.swift in Sources */,
 				68F373F9278C4690006411B4 /* UserData.swift in Sources */,
 				68F06FAB277998E2008A9511 /* SignInAppleVC.swift in Sources */,
+				68139E5727B92591005382FC /* PopUpVC.swift in Sources */,
 				68BCD9BC26C2748700BF7283 /* AddInfoViewController.swift in Sources */,
 				68D4385027942A460082BE11 /* Books.swift in Sources */,
 				68BCD9BA26C2730F00BF7283 /* UserInfo.swift in Sources */,
