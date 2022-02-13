@@ -14,7 +14,7 @@ class TestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        schemeBtn.layer.cornerRadius = 15
+//        schemeBtn.layer.cornerRadius = 15
         self.setupProviderLoginView()
     }
     
@@ -88,6 +88,18 @@ extension TestViewController: ASAuthorizationControllerPresentationContextProvid
             print("User Name : \((fullName?.givenName ?? "") + (fullName?.familyName ?? ""))")
             print("token : \(String(describing: tokeStr))")
             
+            
+            //userInfo 저장하기
+            //토큰 확인 > 원래 서버 쪽에서
+            if (String(describing: tokeStr) == "eyJraWQiOiJlWGF1bm1MIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoibGVleWVvbjIuRnVuY3Rpb25MaXN0LVN3aWZ0IiwiZXhwIjoxNjQ0ODM3OTE3LCJpYXQiOjE2NDQ3NTE1MTcsInN1YiI6IjAwMTI4MS45MzAxYWFhMWY2MTc0MjNjOWM3YTY0YjY3MWI2ZWI4NC4wNzU4IiwiY19oYXNoIjoiQkR3ckxXTTFfQ3hQek10alMyQVA3QSIsImVtYWlsIjoiNXBuZzVyY3R3NEBwcml2YXRlcmVsYXkuYXBwbGVpZC5jb20iLCJlbWFpbF92ZXJpZmllZCI6InRydWUiLCJpc19wcml2YXRlX2VtYWlsIjoidHJ1ZSIsImF1dGhfdGltZSI6MTY0NDc1MTUxNywibm9uY2Vfc3VwcG9ydGVkIjp0cnVlfQ.WnfKQ2QlnxUUkB2_ighqCcEChADdBFXnsHEknLR9lqUa2uMk3ybym378uIcV-c8Vm-_e7lQgG_oUyfWV8M2ialgJtWcvPJcy0FqrtaaE0vqG44IZMXkDT-O7REYV8fadkGtaoZGQyb2NkmZ40V4aFs0sJxbg5GO4LHgXMDU4PTfgjsk9k2IXQA6kyt5tYpWfbu8D_m58i9emFF6SfmHfFYnxRMPm-K6qCgmingY3nNMYlt2BkB5EfPwOn7qTVEmz-FwDr-CErE1Ijp3DuQlM403NAGsy5ySLXrEiymh0KTb3wqduqKhPXuV7nHZyyLUaD7kvTCGbBTjQzXTJvglPTw"){
+                
+                UserDefaults.standard.set("이연", forKey: "name")
+                UserDefaults.standard.set("leeyeon", forKey: "id")
+                UserDefaults.standard.set("PASSWORD", forKey: "pw")
+                
+                
+            }
+
         default:
             break
         }
