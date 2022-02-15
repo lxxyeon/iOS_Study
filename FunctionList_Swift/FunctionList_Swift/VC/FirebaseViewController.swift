@@ -15,6 +15,9 @@ class FirebaseViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        
+        
 //        let list = [1, 2, 3]
 //        print("ddddddddddd\(list[10])") // nil
     }
