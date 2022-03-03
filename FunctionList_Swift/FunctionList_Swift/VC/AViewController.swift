@@ -102,7 +102,7 @@ class AViewController: UIViewController, BViewControllerDelegate, Storyboarded{
         bVC.modalPresentationStyle = .fullScreen
         self.present(bVC, animated: true, completion: nil)
         //3. 위임자 설정!!
-        bVC.delegate = self
+         
     }
     
     // 델리게이트 메소드
