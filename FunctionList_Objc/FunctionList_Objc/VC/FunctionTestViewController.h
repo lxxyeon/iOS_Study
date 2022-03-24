@@ -10,7 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FunctionTestViewController : UIViewController
-
+-(NSString*)sha256HashFor:(NSString*)input;
+-(NSString*)sha256HashForText:(NSString*)text;
 @end
 
 NS_ASSUME_NONNULL_END

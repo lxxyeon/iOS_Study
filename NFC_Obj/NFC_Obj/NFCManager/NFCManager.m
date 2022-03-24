@@ -88,7 +88,7 @@
 - (void)readerSession:(NFCNDEFReaderSession *)session didDetectNDEFs:(NSArray<NFCNDEFMessage *> *)messages {
     NSLog(@"reader：%s===%@", __FUNCTION__, messages);
     NSLog(@"session : %@", session);
-    dispatch_async(dispatch_get_main_queue(), ^{
+//    dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"session : %@", session);
         [self.nfcndefMessage addObjectsFromArray:messages];
         
@@ -100,7 +100,7 @@
         NSLog(@"uuid : %@", uuid);
         
         
-    });
+//    });
 }
 
 - (void)readerSession:(NFCNDEFReaderSession *)session didInvalidateWithError:(NSError *)error {

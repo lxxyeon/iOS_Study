@@ -26,8 +26,10 @@
     self.label.translatesAutoresizingMaskIntoConstraints = NO;
     [self.label.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor];
     [self.label.centerYAnchor constraintEqualToAnchor: self.view.centerYAnchor];
+    long *longValue = 0x00000002836c4b80;
+    NSString* myString;
     
-    
+    myString = [NSString stringWithFormat:@"%ld", longValue];
     
 //    self.stringTest;
     //    _modelLabel.text = self.deviceModelName;
