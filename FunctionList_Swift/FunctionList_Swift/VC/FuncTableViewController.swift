@@ -12,7 +12,7 @@ import CommonCrypto
 class FuncTableViewController: UITableViewController, Storyboarded {
     var sha256Test = "sha256Test"
     
-    var funcList: [String] = ["1. urlSchemeTest - kakao", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness", "5. SignInApple", "6. Vibrate", "sha256Test", "8. Alamofire"]
+    var funcList: [String] = ["1. urlSchemeTest - kakao", "2. FirebaseCrashlytics", "3. StringTest", "4. screenBrightness", "5. SignInApple", "6. Vibrate", "sha256Test", "8. Alamofire", "9. NFC"]
     let cellId: String = "cell"
     
     @IBOutlet var funcTableView: UITableView!
@@ -74,6 +74,9 @@ class FuncTableViewController: UITableViewController, Storyboarded {
             //Alamofire
         case 7:
             self.changeView(viewID: "httpNetworkVC")
+            
+        case 8:
+            self.changeView(viewID: "NFCVC")
             
         default:
             break

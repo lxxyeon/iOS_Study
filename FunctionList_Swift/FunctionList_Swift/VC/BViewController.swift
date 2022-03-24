@@ -22,6 +22,12 @@ import Foundation
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.say("hello")
+    }
+    @discardableResult
+    func say(_ something: String) -> String {
+        print(something)
+        return something
     }
 
     @IBAction func dismissBVC(_ sender: Any) {
@@ -42,4 +48,7 @@ import Foundation
     func setNavigationTitle(title: String) {
         titleLabel.text = title
     }
+ 
+
+
 }
