@@ -55,9 +55,22 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
             return
         }
         
+        DispatchQueue.main.async {
+            // Main 큐에서 비동기 방식으로 실행할 코드
+        }
+        DispatchQueue.global().async {
+            // Background 큐에서 비동기 방식으로 실행할 코드
+        }
+        DispatchQueue.main.sync {
+            // Main 큐에서 동기 방식으로 실행할 코드
+        }
+        DispatchQueue.global().sync {
+            // Background 큐에서 동기 방식으로 실행할 코드
+        }
         
         if let buyViewController = fromViewController as? BViewController {
             childDidFinish(buyViewController.coordinator)
         }
     }
+    
 }
